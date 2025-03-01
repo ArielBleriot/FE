@@ -1,0 +1,109 @@
+<section class=" login-section">
+    <div class="h-100 d-flex">
+        <div class="bg-mode rounded-4 overflow-hidden w-100">
+            <div class="row g-0">
+                <div
+                    class="col-lg-6 align-items-center justify-content-center order-2 order-lg-1 d-lg-flex d-none border-end-lg-1 border-gray-300">
+                    <div class="p-3 p-lg-5">
+                        <img src="../../../../assets/img/brandLogo.jpg" alt="" class="img-fluid w-px-400">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 order-1">
+                    <div class="p-4 p-sm-7 vh-xxl-100 overflow-auto">
+                        <div class="max-w-px-500 mx-auto">
+                            <a href="index.html">
+                                <img class="h-px-50 mb-4" src="../../../../assets/img/brandLogo.jpg" alt="logo">
+                            </a>
+                            <h1 class="mb-2 h3 fw-bold color-gray-900">Create new account</h1>
+                            <p class="mb-0 color-gray-600">Already a member? <a routerLink="/accounts/login">Log in</a>
+                            </p>
+
+                            <form class="mt-4 text-start" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">Enter email id</label>
+                                    <input type="email" class="form-control rounded-2 h-px-40" formControlName="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">Full Name</label>
+                                    <input type="text" class="form-control rounded-2 h-px-40" formControlName="fullName">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">
+                                        Univeristy Name:
+                                    </label>
+                                    <p-autoComplete class="d-block" styleClass="w-100 p-multiselect-h-36px" placeholder="Enter Univeristy Name"  formControlName="universityName" field="universityName"
+                                        inputStyleClass="h-px-36 w-100" [suggestions]="universitySuggestions" optionLabel="universityName" optionValue="universityName" (completeMethod)="searchUniversities($event)" />
+                                </div>
+                               
+                            
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">Field of Study</label>
+                                    <select class="form-control rounded-2 h-px-40" formControlName="fieldOfStudy">
+                                        <option *ngFor="let field of fieldsOfStudy" [value]="field.name">{{ field.name }}</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">Personal Interest</label>
+                                    <p-multiSelect class="d-block" styleClass="w-100 p-multiselect-h-36px" [options]="personalInterests" name="personalInterests"
+                                    optionLabel="name" optionValue="name" placeholder="Select" appendTo="body" formControlName="personalInterests" />
+
+                                </div>
+                            
+                                <!-- Gender Field (Radio buttons) -->
+                                <div class="mb-3">
+                                    <label class="form-label color-gray-600">Gender</label>
+                                    <div class="d-flex gap-3">
+                                        <div>
+                                            <input type="radio" class="form-check-input" id="genderMale" formControlName="gender" value="Male">
+                                            <label for="genderMale" class="color-gray-600 ps-2">Male</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" class="form-check-input" id="genderFemale" formControlName="gender" value="Female">
+                                            <label for="genderFemale" class="color-gray-600 ps-2">Female</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" class="form-check-input" id="genderOther" formControlName="gender" value="Other">
+                                            <label for="genderOther" class="color-gray-600 ps-2">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3 position-relative">
+                                    <label class="form-label color-gray-600">Enter password</label>
+                                    <input class="form-control fakepassword rounded-2 h-px-40" type="password" id="psw-input" formControlName="password">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
+                                        <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2 color-gray-700" (click)="togglePasswordVisibility()"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="mb-3 position-relative">
+                                    <label class="form-label color-gray-600">Confirm password</label>
+                                    <input class="form-control fakepassword rounded-2 h-px-40" type="password" id="confirmPsw-input" formControlName="confirmPassword">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
+                                        <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2 color-gray-700" (click)="togglePasswordVisibility()"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="mb-3 d-sm-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input type="checkbox" class="form-check-input checkbox-sm" id="rememberCheck" formControlName="rememberMe">
+                                        <label class="form-check-label color-gray-600 pt-1" for="rememberCheck">Keep me signed in</label>
+                                    </div>
+                                </div>
+                            
+                                <div>
+                                    <button type="submit" class="btn btn-primary w-100 mb-0 mt-3" [disabled]="!signupForm.valid || isSubmitting"> {{ isSubmitting ? 'Please wait...' : 'Signup' }}</button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <!-- Form END -->
+                    </div>
+                </div>
+            </div><p-toast></p-toast>
+        </div>
+    </div>
+</section>

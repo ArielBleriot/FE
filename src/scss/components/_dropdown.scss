@@ -1,0 +1,12 @@
+.dropdown-toggle {
+    &.caret-none {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .p-multiselect-token{
+    font-size: 12px;
+    border-radius: 4px;
+  }

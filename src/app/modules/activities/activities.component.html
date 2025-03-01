@@ -1,0 +1,138 @@
+<section class="activity-timeline">
+    <div class="container">
+        <div class="activity-cover rounded-4 p-3 p-sm-5 position-relative">
+            <div class="row my-2 my-xl-5 z-1 position-relative">
+                <div class="col-md-8 mx-auto">
+                    <h1 class="text-center text-white fs-lg-50 fs-32 fw-bold max-w-70 m-auto mb-xl-0 mb-3">Explore
+                        Activities That Inspire You</h1>
+                </div>
+            </div>
+
+            <form class="bg-white shadow rounded-4 position-relative p-4 pe-md-5 pb-5 pb-md-4 mb-4 z-1">
+              <div class="row">
+                <!-- Location input -->
+                <div class="col-lg-4 mb-px-40 mt-3 mb-lg-2">
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="w-px-50 d-flex justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon h-px-50 color-gray-800">
+                        <path d="M12 21s6-5.686 6-10a6 6 0 0 0-12 0c0 4.314 6 10 6 10z"></path>
+                        <circle cx="12" cy="11" r="2"></circle>
+                      </svg>
+                    </div>
+                    <div class="flex-1 position-relative">
+                      <label class="fs-16 color-gray-700 bg-white color-gray-700 fs-16 p-1 position-absolute px-2 start-px-12 z-2 top-n18">Location</label>
+                      <p-autoComplete [(ngModel)]="location"  name="location" [suggestions]="filteredCountries" optionLabel="name" class="w-100" styleClass="w-100" inputStyleClass="h-px-54 w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Date Range input -->
+                <div class="col-lg-4 mb-px-30 mt-3 mb-lg-2">
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="w-px-50 d-flex justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon h-px-40 color-gray-800">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="flex-1 position-relative">
+                      <label class="fs-16 color-gray-700 bg-white color-gray-700 fs-16 p-1 position-absolute px-2 start-px-12 z-2 top-n18">Date Range</label>
+                      <p-calendar [(ngModel)]="startDate" name="startDate"  [readonlyInput]="true" class="w-100" styleClass="w-100" inputStyleClass="h-px-54 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Checkbox for "Based on my interest" -->
+                <div class="col-lg-4 d-flex align-items-center mt-3 mb-lg-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="w-px-50 d-flex justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon h-px-36 color-gray-800">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path>
+                        <path d="M12 3v1.5"></path>
+                        <path d="M12 21v-1.5"></path>
+                        <path d="M3 12h1.5"></path>
+                        <path d="M21 12h-1.5"></path>
+                      </svg>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <p-checkbox name="basedOnInterest" [binary]="true" [(ngModel)]="basedOnInterest" value="" inputId="ny" />
+                      <label for="ny" class="fs-16 color-gray-700">Based on my interest</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="btn-position-md-middle">
+                <button type="button" (click)="filterProjects()" class="btn btn-primary rounded-circle w-px-56 h-px-56 d-flex align-items-center justify-content-center p-0">
+                  <i class="fa fa-search fs-18"></i>
+                </button>
+              </div>
+            </form>
+            
+        </div>
+    </div>
+</section>
+
+<section class="events py-5">
+    <div class="container">
+      <div *ngIf="activities.length > 0; else noActivities" class="mb-5">
+        <h6 class="fw-bold text-dark fs-26 mb-3">Upcoming Activities</h6>
+        
+        <div *ngFor="let activity of activities" class="card shadow-1 p-2 border-0 rounded-px-16 mb-3">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="position-relative">
+                <img [src]="activity.imageUrl" class="card-img rounded-3 h-px-240 object-fit-cover" alt="Card image">
+                <div class="position-absolute top-0 start-0 z-index-1 m-2">
+                  <div class="badge" [ngClass]="{'text-bg-danger': activity.status === 'Sold Out', 'text-bg-info': activity.status === 'Available'}">
+                    {{ activity.status }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body py-md-2 h-100 px-0 d-flex flex-column justify-content-between">
+                <div class="mb-4">
+                  <h5 class="card-title mb-1 fs-20 fw-semibold"><a href="">{{ activity.name }}</a></h5>
+
+                  <div class="d-flex align-items-center gap-2 mt-1">
+                    <i class="fa fa-clock color-gray-600 fs-14"></i>
+                    <div class="fs-14 color-gray-600">{{ activity.date | date: 'short' }}</div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 mt-1">
+                    <i class="fa fa-location-dot color-gray-600 w-px-14"></i>
+                    <div class="fs-14 color-gray-600">{{ activity.location }}</div>
+                  </div>
+                  <div class="card-title mb-1 fs-14"><p href="">{{ activity.description }}</p></div>
+                  <ul class="nav nav-divider mt-3">
+                    <li *ngFor="let interest of activity.interests">
+                         {{ interest }} |
+                      </li>
+                  </ul>
+                </div>
+  
+                <div class="d-flex justify-content-end me-3">
+                  <div>
+                    <button  [disabled]="isSubmitting || activity.status === 'Sold Out'" (click)="registerForActivity(activity.id)" type="button" class="btn btn-sm btn-primary mb-0 w-100 rounded-3 px-3">
+                      <i class="fa me-2 fa-edit"></i>
+                      Register
+                    </button>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <ng-template #noActivities>
+        <p>No activities available at the moment.</p>
+      </ng-template>
+    </div>
+  </section>
+  <p-toast></p-toast>
+  

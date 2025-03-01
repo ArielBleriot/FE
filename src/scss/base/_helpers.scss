@@ -1,0 +1,39 @@
+$font-size-base-px: 16;
+
+@function px2rem($size) {
+    @return  calc($size / $font-size-base-px) + rem;
+}
+
+.top-n18{
+    top: -18px !important;
+}
+
+.btn-position-md-middle {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767.98px) {
+    .btn-position-md-middle {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.p-overlay{
+    z-index: 9999 !important;
+}

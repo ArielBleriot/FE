@@ -1,0 +1,46 @@
+<div class="p-dialog-body">
+    <form [formGroup]="projectForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+            <label class="form-label fw-medium">Project Title</label>
+            <input class="form-control" formControlName="title" placeholder="Enter..." />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-medium">Status</label>
+            <select class="form-control form-select" formControlName="status">
+                <option>Select</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-medium">Description</label>
+            <textarea class="form-control" rows="3" formControlName="description" placeholder="Enter..."></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-medium">Skills</label>
+            <div>
+                <p-multiSelect display="chip" styleClass="w-100" [options]="skills" formControlName="skills" appendTo="body" placeholder="Select..."></p-multiSelect>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-medium">Interests</label>
+            <div>
+                <p-multiSelect display="chip" styleClass="w-100" [options]="interests" formControlName="interests" appendTo="body" placeholder="Select..."></p-multiSelect>
+            </div>
+        </div>
+        <div class="p-dialog-footer border-top-0">
+            <button type="button" class="btn btn-sm color-gray-600 px-3 py-px-6" (click)="closeModal(false)">
+                Cancel
+            </button>
+            <button type="submit" class="btn btn-primary btn-sm me-0 px-3 py-px-6" [disabled]="isSubmitting">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+

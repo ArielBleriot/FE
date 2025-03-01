@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50" height="50" data-name="Component 342 – 64" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+ <rect id="Icon_boundaries" width="50" height="50" fill="none" data-name="Icon boundaries"/>
+ <g id="Search" transform="translate(15 14.998)">
+  <path d="M19.728,17.295,15.834,13.4a.937.937,0,0,0-.664-.273h-.637a8.122,8.122,0,1,0-1.406,1.406v.637a.937.937,0,0,0,.273.664l3.895,3.895a.934.934,0,0,0,1.324,0l1.106-1.106A.942.942,0,0,0,19.728,17.295Zm-11.6-4.168a5,5,0,1,1,5-5A5,5,0,0,1,8.126,13.126Z" data-name="Search"/>
+ </g>
+</svg>

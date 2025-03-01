@@ -1,0 +1,63 @@
+
+@each $shade, $value in $theme-colors {
+  .bg-#{$shade} {
+    background-color: $value !important;
+  }
+}
+
+@each $shade, $value in $theme-colors {
+  .fill-#{$shade} {
+    fill: $value !important;
+  }
+}
+
+@each $shade, $value in $theme-colors {
+  .border-#{$shade} {
+   border-color: $value !important;
+  }
+}
+
+@each $shade, $value in $theme-colors {
+  .text-#{$shade} {
+    color: $value !important;
+  }
+}
+
+@each $opacity, $value in $opacities {
+  .hover-opacity-#{$opacity} {
+    &:hover {
+      opacity: $value !important;
+    }
+  }
+}
+
+@each $display, $value in $displays {
+  .hover-#{$display} {
+    &:hover {
+      display: $value !important;
+    }
+  }
+}
+
+@each $shade, $value in $grays {
+  .color-gray-#{$shade} {
+    color: $value !important;
+  }
+}
+@each $shade, $value in $grays {
+  .bg-gray-#{$shade} {
+    background: $value !important;
+  }
+}
+
+@each $shade, $value in $grays {
+  .fill-gray-#{$shade} {
+    fill: $value !important;
+  }
+}
+
+@each $shade, $value in $grays {
+  .border-gray-#{$shade} {
+   border-color: $value !important;
+  }
+}

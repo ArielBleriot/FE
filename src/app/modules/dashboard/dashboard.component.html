@@ -1,0 +1,97 @@
+
+
+<section class="events py-5">
+  <div class="container">
+    <div *ngIf="activities.length > 0; else noActivities" class="mb-5">
+      <h6 class="fw-bold text-dark fs-26 mb-3">Recommended Activities</h6>
+      
+      <div *ngFor="let activity of activities" class="card shadow-1 p-2 border-0 rounded-px-16 mb-3">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="position-relative">
+              <img [src]="activity.imageUrl" class="card-img rounded-3 h-px-240 object-fit-cover" alt="Card image">
+              <div class="position-absolute top-0 start-0 z-index-1 m-2">
+                <div class="badge" [ngClass]="{'text-bg-danger': activity.status === 'Sold Out', 'text-bg-info': activity.status === 'Available'}">
+                  {{ activity.status }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body py-md-2 h-100 px-0 d-flex flex-column justify-content-between">
+              <div class="mb-4">
+                <h5 class="card-title mb-1 fs-20 fw-semibold"><a href="">{{ activity.name }}</a></h5>
+                <div class="badge mb-2 min-w-px-50 fw-medium fs-13 mt-1">{{ activity.date | date: 'short' }}</div>
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <i class="fa fa-clock color-gray-600 fs-14"></i>
+                  <div class="fs-14 color-gray-600">{{ activity.date | date: 'short' }}</div>
+                </div>
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <i class="fa fa-location-dot color-gray-600 w-px-14"></i>
+                  <div class="fs-14 color-gray-600">{{ activity.location }}</div>
+                </div>
+                <div class="card-title mb-1 fs-14"><p>{{ activity.description }}</p></div>
+
+                <ul class="nav nav-divider mt-3">
+                  <li *ngFor="let interest of activity.interests">
+                      {{ interest }}
+                    </li>
+                </ul>
+              </div>
+
+              <div class="d-flex justify-content-end me-3">
+                <div>
+                  <a href="#" class="btn btn-sm btn-primary mb-0 w-100 rounded-3 px-3">
+                    <i class="fa me-2 fa-edit"></i>
+                    Register
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="projects.length > 0;">
+      <h6 class="fw-bold text-dark fs-26 mb-3">Recommended Projects</h6>
+      <div *ngFor="let project of projects" class="card shadow-1 border p-px-26 rounded-px-16 mb-3">
+        <div class="d-flex gap-4">
+            <div class="">
+                <img class="h-rem-10 w-rem-14 rounded-px-16 object-fit-cover"
+                    src="https://images.unsplash.com/photo-1736135290115-ec129b0f31fc?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div>
+                <h1 class="fs-20 fw-semibold color-gray-900 mb-2 mt-1">{{project.title}}</h1>
+                <div class="badge text-bg-info text-white mb-2">
+                    {{project.status}}
+                </div>
+                <p class="line-clamp-4 color-gray-700 mb-4">
+                   {{project.description}}
+                </p>
+                <div class="mb-4">
+                    <h1 class="fs-16 fw-semibold color-gray-900 mb-2">Skills</h1>
+                    <div class="d-flex gap-2 flex-wrap">
+                       <div  *ngFor="let skill of project.skills">
+                        <div class="fs-12 px-px-12 py-px-4 bg-gray-300 rounded-px-4 color-gray-800 d-inline-block"> {{skill}} </div>
+
+                       </div>
+                       
+                    </div>
+                </div>
+                <p class="line-clamp-4 color-gray-700 mb-4">
+                  {{project.fieldOfStudy}}
+               </p>
+                
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <ng-template #noActivities>
+      <p>No activities available at the moment.</p>
+    </ng-template>
+    
+  </div>
+</section>

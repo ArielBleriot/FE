@@ -1,0 +1,69 @@
+.activity-timeline {
+    .activity-cover {
+        background-image: url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgb(0 0 0 / 12%), rgb(0 0 0 / 45%));
+            z-index: 1;
+            border-radius: 1rem;
+        }
+    }
+}
+
+spinnericon {
+    display: none;
+}
+
+.shadow-1 {
+    box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.1) !important;
+}
+.shadow-2{
+    box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.1) !important;
+}
+.text-dark {
+    color: #0b0a12 !important;
+}
+
+.card-title {
+    a {
+        color: #0b0a12;
+        &:hover{
+            color: $brand-primary;
+        }
+    }
+}
+
+.badge-soft-success {
+    color: #00af12 !important;
+    background: rgba(0, 175, 18, 0.15) !important;
+}
+
+.badge-soft-danger {
+    color: #b10003 !important;
+    background: rgba(177, 0, 3, 0.15) !important;
+}
+.badge-soft-info {
+    color: #008bdf !important;
+    background: rgba(0, 139, 223, 0.15) !important;
+}
+
+.nav.nav-divider .nav-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav.nav-divider .nav-item + .nav-item:before {
+    content: "•";
+    color: inherit;
+    padding-left: 0.65rem;
+    padding-right: 0.75rem;
+    opacity: 0.8;
+}

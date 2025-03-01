@@ -1,0 +1,13 @@
+@mixin btn-light(){
+    border: $btn-border-width solid $btn-border-light !important;
+    color: $btn-color-light !important;
+    background: $btn-bg-light !important;
+    &:hover {
+      color: var(--gray-900) !important;
+      border: $btn-border-width solid $btn-border-light !important;
+      background: $btn-border-light !important;
+    }
+    svg {
+      fill: $btn-border-light;
+    }
+  }

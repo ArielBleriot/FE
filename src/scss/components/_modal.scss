@@ -1,0 +1,65 @@
+.p-dialog-mask {
+    z-index: 9999 !important;
+}
+
+.p-dialog {
+    width: 100%;
+    margin: 0.5rem;
+    border: 0 !important;
+    .p-dialog-header {
+        padding-block: 14px;
+        padding-inline: 20px;
+        text-transform: uppercase;
+        .p-dialog-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $brand-primary !important;
+        }
+    }
+    .p-dialog-content {
+        padding: 0 !important;
+        overflow: visible !important;
+        .p-dialog-body {
+            padding: $p-dialog-body-padding;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        .p-dialog-footer {
+            padding-inline: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        width: $modal-md;
+    }
+
+    &.p-dialog-lg {
+        @include media-breakpoint-up(lg) {
+            width: $modal-lg;
+        }
+    }
+
+    &.p-dialog-xl {
+        @include media-breakpoint-up(lg) {
+            width: $modal-lg;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: $modal-xl;
+        }
+    }
+
+    &.p-dialog-xxl {
+        @include media-breakpoint-up(lg) {
+            width: $modal-lg;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: $modal-xl;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: $modal-xxl;
+        }
+    }
+}

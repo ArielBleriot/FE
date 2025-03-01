@@ -1,0 +1,26 @@
+.form-select {
+  color: var(--text-color);
+  border-color: var(--gray-400);
+  border-radius: $border-radius-input;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    @if $enable-shadows {
+      box-shadow: $input-focus-box-shadow;
+    } @else {
+      // Avoided using mixin so we can pass custom focus shadow properly
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+  
+  &:disabled {
+    color: $form-select-disabled-color;
+    background-color: $form-select-disabled-bg;
+    border-color: $form-select-disabled-border-color;
+  }
+}

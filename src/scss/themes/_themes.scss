@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@mixin default-theme {
+    @each $color, $value in $theme-colors-rgb {
+        --#{$prefix}#{$color}-rgb: #{$value};
+    }
+    // Layout colors
+    --body-bg: #f0f2f5;
+    --gray-100: #{$gray-100};
+    --gray-200: #{$gray-200};
+    --gray-300: #{$gray-300};
+    --gray-400: #{$gray-400};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-600};
+    --gray-700: #{$gray-700};
+    --gray-800: #{$gray-800};
+    --gray-900: #{$gray-900};
+    --gray-1000: #{$gray-1000};
+    --gray-1100: #{$gray-1100};
+    --gray-1200: #{$gray-1200};
+
+
+    --input-focus-border-color: #007bff;
+    --input-focus-shadow: 0 0 0 0.2rem #268fff80;
+    --input-placeholder-color: #858d93;
+    --form-switch-input-bg: #d3d3d3;
+    --input-disabled-bg: #f7f9fa;
+
+    // buttons
+    --btn-border-light: #bec3cb;
+    --btn-color-light: #647181;
+    --btn-bg-light: #f7f9fa;
+
+
+
+
+  // Typography colors
+  --text-color: #707090;
+}
+
+@mixin dark-theme {
+
+    //gray shades
+    --gray-100: #131a23;
+    --gray-200: #151c26;
+    --gray-300: #1f262e;
+    --gray-400: #38414d;
+    --gray-500: #424c59;
+    --gray-600: #74808f;
+    --gray-700: #a0adbd;
+    --gray-800: #ccd5e0;
+    --gray-900: #eff2f6;
+    --gray-1000: #f6f8fa;
+    --gray-1100: #fcfeff;
+    --gray-1200: #ffffff;
+
+    --input-focus-border-color: #8dd0ff;
+    --input-focus-shadow: 0 0 0 1px #e3f3fe;
+    --input-placeholder-color: #858d93;
+    --form-switch-input-bg: #3f4b5b;
+    --input-disabled-bg: #4c5059;
+
+// buttons
+--btn-border-light: #74808f;
+--btn-color-light: #ccd5e0;
+--btn-color-light: #ccd5e0;
+
+
+   // Typography colors
+   --text-color: #ffffff;
+
+}
+
+:root {
+    @include default-theme();
+}
+
+.dark {
+    @include dark-theme();
+    
+}

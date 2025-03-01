@@ -1,0 +1,560 @@
+
+
+
+$font-size-base-px: 16;
+
+//Fonts
+$font-md: px2rem(15);
+$font-xxs: calc(#{$font-md} * 0.8); //12
+$font-xs: calc(#{$font-md} * 0.85); //12.75
+$font-sm: calc(#{$font-md} * 0.934); //14.01
+$font-lg: calc(#{$font-md} * 1.06); //16
+$font-xl: calc(#{$font-md} * 1.2); //18
+$font-xxl: calc(#{$font-md} * 2);
+
+
+// scss-docs-start theme-color-variables
+$brand-danger: #b10003;
+$brand-primary: #614092;
+$brand-secondary: #74808f;
+$brand-success: #00af12;
+$brand-info: #008bdf;
+$brand-warning: #ff973d;
+$brand-white: #ffffff;
+$brand-light: #f7f9fa;
+$brand-dark:  #1f262e;
+// scss-docs-end theme-color-variables
+$border-color: #eaeaea;
+$modal-sm: 300px !default;
+$modal-md: 500px !default;
+$modal-lg: 800px !default;
+$modal-xl: 1140px !default;
+$modal-xxl: 1320px !default;
+$p-dialog-body-padding: 10px 20px 10px 20px;
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $brand-primary,
+  "secondary": $brand-secondary,
+  "success": $brand-success,
+  "info": $brand-info,
+  "warning": $brand-warning,
+  "danger": $brand-danger,
+  "light": $brand-light,
+  "dark": $brand-dark
+);
+
+
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #fcfeff;
+$gray-200: #f5f7f9;
+$gray-300: #eff2f6;
+$gray-400: #ccd5e0;
+$gray-500: #b3b8bd;
+$gray-600: #74808f;
+$gray-700: #5a5a5a;
+$gray-800: #38414d;
+$gray-900: #313639;
+$gray-1000: #151c26;
+$gray-1100: #131a23;
+$gray-1200: #0f141c;
+$black: #0f141c;
+$gray: #8c9ba5;
+
+$grays: (
+  "100": var(--gray-100),
+  "200": var(--gray-200),
+  "300": var(--gray-300),
+  "400": var(--gray-400),
+  "500": var(--gray-500),
+  "600": var(--gray-600),
+  "700": var(--gray-700),
+  "800": var(--gray-800),
+  "900": var(--gray-900),
+  "1000": var(--gray-1000),
+  "1100": var(--gray-1100),
+  "1200": var(--gray-1200)
+) !default;
+
+
+// $font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+
+$pixels: (
+  0: px2rem(0),
+  1: px2rem(1),
+  2: px2rem(6),
+  3: px2rem(3),
+  4: px2rem(4),
+  5: px2rem(5),
+  6: px2rem(6),
+  7: px2rem(7),
+  8: px2rem(8),
+  9: px2rem(9),
+  10: px2rem(10),
+  11: px2rem(11),
+  12: px2rem(12),
+  13: px2rem(13),
+  14: px2rem(14),
+  15: px2rem(15),
+  16: px2rem(16),
+  17: px2rem(17),
+  18: px2rem(18),
+  19: px2rem(19),
+  20: px2rem(20),
+  21: px2rem(21),
+  22: px2rem(22),
+  23: px2rem(23),
+  24: px2rem(24),
+  25: px2rem(25),
+  26: px2rem(26),
+  27: px2rem(27),
+  28: px2rem(28),
+  29: px2rem(29),
+  30: px2rem(30),
+  31: px2rem(31),
+  32: px2rem(32),
+  33: px2rem(33),
+  34: px2rem(34),
+  35: px2rem(35),
+  36: px2rem(36),
+  37: px2rem(37),
+  38: px2rem(38),
+  39: px2rem(39),
+  40: px2rem(40),
+  41: px2rem(41),
+  42: px2rem(42),
+  43: px2rem(43),
+  44: px2rem(44),
+  45: px2rem(45),
+  46: px2rem(46),
+  47: px2rem(47),
+  48: px2rem(48),
+  49: px2rem(49),
+  50: px2rem(50),
+  51: px2rem(51),
+  52: px2rem(52),
+  53: px2rem(53),
+  54: px2rem(54),
+  56: px2rem(56),
+  57: px2rem(57),
+  58: px2rem(58),
+  59: px2rem(59),
+  60: px2rem(60),
+  61: px2rem(61),
+  62: px2rem(62),
+  63: px2rem(63),
+  64: px2rem(64),
+  68: px2rem(68),
+  70: px2rem(70),
+  80: px2rem(80),
+  82: px2rem(82),
+  83: px2rem(83),
+  84: px2rem(84),
+  98: px2rem(98),
+  104: px2rem(104),
+  122: px2rem(122),
+  123: px2rem(123),
+  147: px2rem(147),
+  148: px2rem(148),
+  150: px2rem(150),
+  180: px2rem(180),
+  200: px2rem(200),
+  220: px2rem(220),
+  240: px2rem(240),
+  270: px2rem(270),
+  300: px2rem(300),
+  350: px2rem(350),
+  400: px2rem(400),
+  500: px2rem(500),
+  600: px2rem(600),
+) !default;
+
+$font-weights: (
+  "lighter": $font-weight-lighter,
+  "light": $font-weight-light,
+  "regular": $font-weight-regular,
+  "normal": $font-weight-normal,
+  "medium": $font-weight-medium,
+  "semibold": $font-weight-semibold,
+  "bold": $font-weight-bold,
+  "extrabold": $font-weight-extrabold,
+  "black": $font-weight-black
+);
+
+$percentages: (
+  0:0%,
+  5: 5%,
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  44: 44%,
+  45: 45%,
+  46: 46%,
+  48: 48%,
+  50: 50%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
+  auto: auto,
+);
+
+$rems: (
+  unset: unset,
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+  7: 7rem,
+  8: 8rem,
+  9: 9rem,
+  10: 10rem,
+  11: 11rem,
+  12: 12rem,
+  13: 13rem,
+  14: 14rem,
+  15: 15rem,
+  16: 16rem,
+  17: 17rem,
+  18: 18rem,
+  19: 19rem,
+  20: 20rem,
+  23: 23rem,
+  25: 25rem,
+  30: 30rem,
+  31: 31rem,
+  32: 32rem,
+  33: 33rem,
+  34: 34rem,
+  35: 35rem,
+  36: 36rem,
+  37: 37rem,
+  38: 38rem,
+  39: 39rem,
+  40: 40rem,
+  41: 41rem,
+  42: 42rem,
+  43: 43rem,
+  44: 44rem,
+  45: 45rem,
+  46: 46rem,
+  47: 47rem,
+  48: 48rem,
+  49: 49rem,
+  50: 50rem,
+  51: 51rem,
+  52: 52rem,
+  53: 53rem,
+  54: 54rem,
+  55: 55rem,
+  56: 56rem,
+  57: 57rem,
+  58: 58rem,
+  59: 59rem,
+  60: 60rem,
+  61: 61rem,
+  62: 62rem,
+  63: 63rem,
+  64: 64rem,
+  65: 65rem,
+  66: 66rem,
+  67: 67rem,
+  68: 68rem,
+  69: 69rem,
+  70: 70rem,
+  71: 71rem,
+  72: 72rem,
+  73: 73rem,
+  74: 74rem,
+  75: 75rem,
+  76: 76rem,
+  77: 77rem,
+  78: 78rem,
+  79: 79rem,
+  80: 80rem,
+  95: 95rem,
+  96: 96rem,
+  97: 97rem,
+  100: 100%,
+);
+
+$vh-calc: (
+  unset: unset,
+  60: calc(100vh - 60px),
+  110: calc(100vh - 60px - 50px),
+  140: calc(100vh - 60px - 80px),
+  180: calc(100vh - 60px - 80px - 40px),
+  190: calc(100vh - 60px - 80px - 50px),
+  196: calc(100vh - 60px - 80px - 56px),
+  200: calc(100vh - 60px - 80px - 60px),
+  206: calc(100vh - 60px - 80px - 66px),
+  212: calc(100vh - 60px - 80px - 72px),
+  220: calc(100vh - 60px - 80px - 80px),
+  228: calc(100vh - 60px - 80px - 88px),
+  233: calc(100vh - 60px - 80px - 93px),
+  250: calc(100vh - 60px - 80px - 50px - 60px),
+  256: calc(100vh - 60px - 80px - 56px - 69px),
+  265: calc(100vh - 60px - 80px - 56px - 69px),
+  269: calc(100vh - 60px - 80px - 88px - 41px),
+  270: calc(100vh - 60px - 80px - 60px - 70px),
+  294:calc(100vh - 60px - 80px - 88px - 66px),
+  296:calc(100vh - 60px - 80px - 88px - 68px),
+  275:calc(100vh - 60px - 80px - 88px - 47px),
+  299: calc(100vh - 60px - 80px - 93px - 66px),
+  281: calc(100vh - 60px - 80px - 88px - 53px),
+  297: calc(100vh - 60px - 80px - 88px - 69px),
+  302: calc(100vh - 60px - 80px - 88px - 74px),
+  331: calc(100vh - 60px - 80px - 122px - 69px),
+  328:calc(100vh - 60px - 80px - 60px - 128px),
+  330:calc(100vh - 60px - 80px - 60px - 130px),
+  396:calc(100vh - 60px - 80px - 60px - 196px),
+  397:calc(100vh - 60px - 80px - 60px - 197px),
+  398:calc(100vh - 60px - 80px - 60px - 198px),
+  408: calc(100vh - 60px - 80px - 56px - 212px),
+  430:calc(100vh - 60px - 80px - 60px - 230px),
+  446:calc(100vh - 60px - 80px - 60px - 70px - 176px),
+  452: calc(100vh - 60px - 80px - 56px - 256px),
+  494:calc(100vh - 60px - 80px - 60px - 70px - 224px),
+  521: calc(100vh - 60px - 80px - 56px - 256px - 69px),
+  588: calc(100vh - 60px - 80px - 56px - 256px - 69px - 67px),
+);
+
+$opacities: (
+  0: 0,
+  20: 0.2,
+  25: 0.25,
+  30: 0.3,
+  35: 0.35,
+  40: 0.4,
+  45: 0.45,
+  50: 0.5,
+  55: 0.55,
+  60: 0.6,
+  65: 0.65,
+  70: 0.7,
+  75: 0.75,
+  80: 0.8,
+  85: 0.85,
+  90: 0.9,
+  95: 0.95,
+  100: 1,
+);
+
+$displays: (
+'block':block,
+'inline-block':inline-block,
+'flex':flex,
+'inline-flex':inline-flex,
+);
+
+$grid-values: (
+  auto-fill-300: repeat(auto-fill, minmax(300px, 1fr)),
+  auto-fill-270: repeat(auto-fill, minmax(270px, 1fr)),
+  auto-fill-260: repeat(auto-fill, minmax(260px, 1fr)),
+  auto-fill-240: repeat(auto-fill, minmax(240px, 1fr)),
+  auto-fill-220: repeat(auto-fill, minmax(220px, 1fr)),
+);
+
+$zindex-1: 9999;
+$zindex-2: 9990;
+$zindex-3: 9980;
+$zindex-4: 9970;
+$zindex-5: 9960;
+$zindex-1019: 1019;
+$z-indexes: (
+  1: $zindex-1,
+  2: $zindex-2,
+  3: $zindex-3,
+  4: $zindex-4,
+  5: $zindex-5,
+  1019: $zindex-1019,
+  99:99,
+  unset: unset,
+);
+//Border-radius
+$rounded: px2rem(50);
+$rounded-full: px2rem(25);
+$rounded-4: px2rem(20);
+$rounded-3: px2rem(15);
+$rounded-2: px2rem(10);
+$rounded-1: px2rem(5);
+
+$border-radiuses: (
+  0: 0,
+  1: px2rem(1),
+  2: px2rem(2),
+  3: px2rem(3),
+  4: px2rem(9),
+  5: px2rem(5),
+  6: px2rem(6),
+  7: px2rem(7)
+) !default;
+
+//Spacing
+//Spacing
+$space-0: px2rem(0);
+$space-2: px2rem(2);
+$space-5: px2rem(5);
+$space-10: px2rem(10);
+$space-16: px2rem(16);
+$space-15: px2rem(15);
+$space-20: px2rem(20);
+$space-25: px2rem(25);
+$space-30: px2rem(30);
+$space-40: px2rem(40);
+
+$enable-negative-margins: true !default;
+$negative-pixels: if($enable-negative-margins, negativify-map($pixels), null) !default;
+$negative-rems: if($enable-negative-margins, negativify-map($rems), null) !default;
+
+//hexa to rgb
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+//rgba-css-var
+$theme-colors-bg-rgba-css-var: map-loop($theme-colors-rgb, rgba-css-var, "$key", "bg");
+$theme-colors-rgba-css-var: map-loop($theme-colors-rgb, rgba-css-var, "$key", "color");
+
+$form-control-border-radious: 0.25rem;
+// scss-docs-start border-variables
+$border-width: 1px !default;
+$border-widths-custom: (
+  0: 0px,
+  1: 1px solid,
+  2: 2px solid,
+  3: 3px solid,
+  4: 4px solid,
+  5: 5px solid,
+) !default;
+
+/* Topbar Header */
+$topbar-height: px2rem(60) !default;
+$topbar-toggle-width: px2rem(40) !default;
+$topbar-logo-width: px2rem(210) !default;
+$topbar-padding: 0 $space-15 0 $space-15 !default;
+$topbar-border-bottom: px2rem(1) solid $border-color !default;
+$topbar-border-top-accent: px2rem(4) solid $primary !default;
+
+/* Sidebar Navigation */
+$sidebar-bg-color: #fcfeff;
+$sidebar-border-right: px2rem(1) solid $border-color !default;
+$sidebar-width: px2rem(184) !default;
+$sidebar-compact-width: px2rem(64) !default;
+$sidebar-font-size: 15px !default;
+$list-bg-active: #f4f8f9;
+$sidebar-icon: grey;
+$sidebar-bg:#fff;
+$sidebar-bg-hover: #fff;
+$sidebar-icon-hover: #fff;
+
+/* Sub Header */
+/* Sub Header */
+$subheader-height: px2rem(45) !default;
+$subheader-border-bottom: px2rem(1) solid $border-color !default;
+
+
+// scss-docs-start border-radius-variables
+$border-radius-input: 0.25rem !default;
+$border-radius-input-sm: 0.3rem !default;
+$border-radius-input-lg: 0.3rem !default;
+$border-radius-input-pill: 50rem !default;
+$border-radius-input-btn-icon: 50% !default;
+// scss-docs-end border-radius-variables
+
+// form control
+$input-focus-border-color: var(--input-focus-border-color);
+$input-focus-box-shadow: var(--input-focus-shadow);
+$input-placeholder-color: var(--input-placeholder-color);
+$input-group-padding-x: 2.1875rem;
+
+$form-check-input-border-radius: 0.125rem;
+$form-input-border-color:  #a0adbd;
+
+$form-select-disabled-bg: var(--input-disabled-bg) !default;
+
+$form-select-disabled-border-color: $input-disabled-border-color !default;
+
+$input-disabled-border-color: null !default;
+
+
+// defualt size checkbox
+$form-check-input-width: 1.125rem; //18 px
+$form-check-input-height: 1.125rem;
+// large checkbox
+$form-check-label-font-size-lg: 0.938rem;
+$form-check-input-font-size-lg: 0.8rem;
+$form-check-input-width-lg: 1.25rem; // 20px
+$form-check-input-height-lg: 1.25rem;
+// small checboxs
+$form-check-input-width-sm: 1rem; // 16px
+$form-check-input-height-sm: 1rem;
+
+// radio size
+$form-radio-input-width: 1rem; //16 px
+$form-radio-input-height: 1rem;
+
+$form-radio-input-width-lg: 1.125rem; //18px
+$form-radio-input-height-lg: 1.125rem;
+
+$form-radio-input-width-sm: 0.875rem; //14px
+$form-radio-input-height-sm: 0.875rem;
+
+// switch
+$form-switch-color: $white;
+$form-switch-width: 2.1em;
+$form-switch-height: 1.1em;
+$form-switch-width-lg: 2.5em;
+$form-switch-height-lg: 1.3em;
+$form-switch-width-sm: 1.8em;
+$form-switch-height-sm: 1em;
+
+$form-switch-input-bg: var(--form-switch-input-bg);
+
+$form-switch-border-radius: $form-switch-width !default;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
+$form-switch-checked-bg-position: right center !default;
+
+// buttons variables 
+// scss-docs-start btn-variables
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.875rem;
+$btn-font-family: $input-btn-font-family !default;
+$btn-font-size: $input-btn-font-size !default;
+$btn-line-height: $input-btn-line-height !default;
+$btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
+
+// font weight 
+$btn-font-weight: $font-weight-semibold;
+
+
+$btn-hover-bg-shade-amount: 15% !default;
+$btn-hover-bg-tint-amount: 15% !default;
+$btn-hover-border-shade-amount: 20% !default;
+$btn-hover-border-tint-amount: 10% !default;
+$btn-active-bg-shade-amount: 20% !default;
+$btn-active-bg-tint-amount: 20% !default;
+$btn-active-border-shade-amount: 25% !default;
+$btn-active-border-tint-amount: 10% !default;
+
+
+$btn-border-light: var(--btn-border-light);
+$btn-color-light: var(--btn-color-light);
+$btn-bg-light: var(--btn-bg-light);

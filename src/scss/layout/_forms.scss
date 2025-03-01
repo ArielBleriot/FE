@@ -1,0 +1,34 @@
+.p-datepicker{
+    table {
+        td {
+            padding: 3.5px;
+            > span{
+                width: 2rem;
+                height: 2rem;
+                font-size: 14px;
+                border-radius: 50%;
+                &.p-highlight {
+                    color: #1D4ED8;
+                    background: #EFF6FF;
+                }
+            }
+        }
+        th {
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .p-datepicker-header .p-datepicker-title {
+        .p-datepicker-month{
+            padding-block: 0 !important;
+        }
+        .p-datepicker-year{
+            padding-block: 0 !important;
+        }
+    }
+}
+
+.p-checkbox .p-checkbox-box.p-highlight{
+    background: $brand-primary;
+    border-color: $brand-primary;
+}

@@ -1,0 +1,7 @@
+.hover-opacity-1{
+    &:hover{
+        .button {
+            opacity: 1 !important;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+
+
+
+// Assume $brand-primary and $theme-colors are defined elsewhere in your SCSS
+
+.form-check-input {
+  &[type="checkbox"] {
+    width: $form-check-input-width;
+    height: $form-check-input-height;
+    border: 2px solid $form-input-border-color;
+    border-radius: $form-check-input-border-radius;
+
+    &:checked {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+    }
+
+    &:checked {
+      @each $color, $value in $theme-colors {
+        &.#{$color} {
+          background-color: $value;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+          border-color: $value;
+        }
+      }
+
+      @each $color, $value in $theme-colors {
+        $theme-number: remove-hash($value);
+        // Output the result to the console
+        //   @debug  $theme-number;
+        &.outline-#{$color} {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23#{$theme-number}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+          border-color: $value;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.checkbox-lg {
+          width: $form-check-input-width-lg;
+          height: $form-check-input-height-lg;
+      }
+    
+
+    &.checkbox-sm {
+          width: $form-check-input-width-sm;
+          height: $form-check-input-height-sm;
+    }
+  }
+
+  // Radio styles
+
+  &[type="radio"] {
+    border: px2rem(1) solid $brand-primary;
+    width: $form-radio-input-width;
+    height: $form-radio-input-height;
+    border-color: $brand-primary;
+
+    &:checked {
+    background-color: transparent;
+    border-color: black;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%233d70b2'/%3e%3c/svg%3e");
+
+    @each $color, $value in $theme-colors {
+      $theme-number: remove-hash($value);
+      &.#{$color} {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23#{$theme-number}'/%3e%3c/svg%3e");
+        border-color: $value;
+        background-color: transparent;
+      }
+    }
+    }
+
+    &.radio-lg {
+      width: $form-radio-input-width-lg;
+      height: $form-radio-input-height-lg;
+      background-size: 20px;
+    }
+    &.radio-sm {
+      width: $form-radio-input-width-sm;
+      height: $form-radio-input-height-sm;
+    }
+    
+
+  }
+}
+
+// form switch
+
+.form-switch {
+  .form-check-input {
+    width: $form-switch-width;
+    height: $form-switch-height;
+    border: 1px solid $form-switch-input-bg;
+    background-color:  $form-switch-input-bg;
+    @include border-radius($form-switch-border-radius);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    &:checked {
+        @each $color, $value in $theme-colors {
+          &.#{$color} {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+            background-color: $value;
+            border-color: $value;
+          }
+      }
+    }
+
+    &.switch-lg {
+      width: $form-switch-width-lg;
+      height: $form-switch-height-lg;
+    }
+    &.switch-sm {
+      width: $form-switch-width-sm;
+      height: $form-switch-height-sm;
+    }
+    
+    
+}
+}

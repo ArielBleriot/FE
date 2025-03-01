@@ -1,0 +1,121 @@
+<div class="bg-black py-4 px-5 position-relative vh-80 d-flex flex-column justify-content-center">
+    <figure class="hds-media-background"><img width="1536" height="927"
+            class="  position-absolute w-100 h-100 object-fit-cover start-0 top-0"
+            alt="International collaboration among students."
+            src="https://www.example.com/your-image-url.jpg">
+    </figure>
+    <div class="skrim-overlay skrim-left mobile-skrim-top"></div>
+
+    <div class="max-w-50">
+        <h1 class="text-white z-index-1 position-relative fs-60">Empowering Student Collaboration Across Borders</h1>
+        <p class="text-white z-index-1 position-relative fs-20 mt-2">Through global partnerships, students can tackle real-world challenges, foster innovation, and contribute to building a more connected world. Explore projects that bridge cultures, ideas, and disciplines.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="pt-px-50 pb-3 border-bottom border-gray-400 mb-3">
+        <h5 class="mb-0">Explore Student Collaboration Modules</h5>
+    </div>
+
+    <p-accordion [multiple]="true">
+        <p-accordion>
+            <!-- Module 1: Sustainable Development Projects -->
+            <p-accordionTab tabStyleClass="mb-3" headerStyleClass="bg-white rounded-px-8 border-0 text-black" contentStyleClass="border-0">
+              <ng-template pTemplate="header">Sustainable Development Projects</ng-template>
+              <p>
+                Collaborate on global projects focused on sustainability, renewable energy, and environmental conservation. 
+                Key concepts include:
+                <ul>
+                  <li><strong>Global Environmental Challenges:</strong> Explore how students can contribute to addressing issues like climate change, deforestation, and water scarcity.</li>
+                  <li><strong>Clean Energy Solutions:</strong> Design and implement solutions that promote the use of renewable energy sources and reduce carbon footprints.</li>
+                  <li><strong>Sustainable Cities:</strong> Plan and develop projects for creating smarter, greener urban environments.</li>
+                </ul>
+                <strong>Project Steps:</strong>
+                <ol>
+                  <li>Form cross-cultural teams to brainstorm innovative solutions for global sustainability issues.</li>
+                  <li>Develop a project plan, focusing on sustainable practices and green technologies.</li>
+                  <li>Share your progress with international peers through collaborative online platforms.</li>
+                </ol>
+            </p-accordionTab>
+          
+            <!-- Module 2: Technology and Innovation in Education -->
+            <p-accordionTab tabStyleClass="mb-3" headerStyleClass="bg-white rounded-px-8 border-0 text-black" contentStyleClass="border-0">
+              <ng-template pTemplate="header">Technology and Innovation in Education</ng-template>
+              <p>
+                Explore innovative educational tools and platforms designed to enhance learning globally. 
+                Key concepts include:
+                <ul>
+                  <li><strong>Online Learning Platforms:</strong> Develop and improve platforms that offer accessible education for students worldwide.</li>
+                  <li><strong>Virtual Classrooms:</strong> Design interactive, online environments for students to connect, share ideas, and learn together.</li>
+                  <li><strong>EdTech Solutions:</strong> Build software or applications that solve educational challenges in different regions.</li>
+                </ul>
+                <strong>Project Steps:</strong>
+                <ol>
+                  <li>Identify challenges faced by international students and propose solutions using technology.</li>
+                  <li>Collaborate with peers from different countries to design and implement innovative tools or resources.</li>
+                  <li>Test the platform and gather feedback to refine your project before presenting it globally.</li>
+                </ol>
+            </p-accordionTab>
+          
+            <!-- Module 3: Cultural Exchange and Global Networking -->
+            <p-accordionTab tabStyleClass="mb-3" headerStyleClass="bg-white rounded-px-8 border-0 text-black" contentStyleClass="border-0">
+              <ng-template pTemplate="header">Cultural Exchange and Global Networking</ng-template>
+              <p>
+                Work on projects that encourage cultural exchange and global networking among students.
+                Key concepts include:
+                <ul>
+                  <li><strong>Global Collaboration:</strong> Use digital tools to collaborate across borders and learn from diverse perspectives.</li>
+                  <li><strong>Cultural Awareness:</strong> Explore the importance of understanding different cultural norms, values, and traditions in a globalized world.</li>
+                  <li><strong>Global Networking:</strong> Build and foster a network of international students to share ideas, resources, and experiences.</li>
+                </ul>
+                <strong>Project Steps:</strong>
+                <ol>
+                  <li>Participate in virtual cultural exchange programs with students from different countries.</li>
+                  <li>Collaborate on projects that address shared global concerns while integrating diverse cultural insights.</li>
+                  <li>Network with peers and professionals from various fields to open doors for future collaborations.</li>
+                </ol>
+            </p-accordionTab>
+          
+            <!-- Module 4: International Research and Innovation Challenges -->
+            <p-accordionTab tabStyleClass="mb-3" headerStyleClass="bg-white rounded-px-8 border-0 text-black" contentStyleClass="border-0">
+              <ng-template pTemplate="header">International Research and Innovation Challenges</ng-template>
+              <p>
+                Engage in global research projects that tackle scientific, technological, and societal challenges.
+                Key concepts include:
+                <ul>
+                  <li><strong>Innovation in Science and Technology:</strong> Focus on emerging fields like artificial intelligence, biotechnology, and quantum computing.</li>
+                  <li><strong>Global Research Projects:</strong> Collaborate with researchers from universities around the world to address key global challenges.</li>
+                  <li><strong>Entrepreneurship and Startups:</strong> Develop innovative solutions that can be transformed into real-world applications.</li>
+                </ul>
+                <strong>Project Steps:</strong>
+                <ol>
+                  <li>Join global research teams to work on cutting-edge scientific or technological challenges.</li>
+                  <li>Use international collaboration tools to share research findings and innovations.</li>
+                  <li>Present your research to a global audience, possibly entering it into international competitions.</li>
+                </ol>
+            </p-accordionTab>
+        </p-accordion>
+    </p-accordion>
+</div>
+<div *ngIf="isChatOpen" class="chat-popup">
+  <div class="chat-header">
+    <span>Chat with AI</span>
+    <button (click)="closeChat()">X</button>
+  </div>
+  <div id="chat-body" class="chat-body">
+    <div *ngFor="let msg of messages">
+      <div *ngIf="msg.role === 'user'" class="user-message">
+        User: {{ msg.content }}
+      </div>
+      <div *ngIf="msg.role === 'assistant'" class="assistant-message">
+        AI: {{ msg.content }}
+      </div>
+    </div>
+  </div>
+  <input [(ngModel)]="userMessage" class="user-message-input" placeholder="Ask me anything..." />
+  <button (click)="sendMessage()">Send</button>
+</div>
+
+<!-- Button to open chat -->
+<button class="open-chat-btn" (click)="openChat()">Chat with AI</button>
+

@@ -1,0 +1,162 @@
+.header {
+    position: sticky;
+    top: 0;
+    background: #e5e9eb;
+    display: flex;
+    align-items: center;
+    height: px2rem(70);
+    padding: 0 px2rem(20);
+    gap: 20px;
+    justify-content: space-between;
+    @include media-breakpoint-up(xl) {
+        height: px2rem(90);
+        padding: 0 px2rem(90);
+        justify-content: start;
+    }
+
+    &__logo {
+        max-width: px2rem(180);
+
+        @include media-breakpoint-up(xl) {
+            max-width: px2rem(245);
+        }
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+
+        .header__flag {
+            margin-left: px2rem(40);
+
+            .dropleft {
+                .dropdown-toggle {
+                    appearance: none;
+                    background: transparent;
+                    border: none !important;
+                    outline: none !important;
+                    padding: 0;
+
+                    &:active,
+                    &:hover,
+                    &:focus {
+                        border: none !important;
+                        box-shadow: none !important;
+                        outline: none !important;
+                    }
+
+                    &::after {
+                        border: none;
+                    }
+
+                    img {
+                        height: px2rem(36);
+                    }
+                }
+
+                .dropdown-menu {
+                    border: none;
+                    min-width: px2rem(90);
+
+                    .dropdown-item {
+                        margin-bottom: px2rem(5);
+                        text-align: center;
+
+                        img {
+                            height: px2rem(36);
+                        }
+
+                        &:active {
+                            background-color: $gray-200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        align-items: center;
+
+        @include media-breakpoint-up(xl) {
+            display: flex;
+        }
+
+        .item {
+            border-bottom: 1px solid transparent;
+            font-size: px2rem(16);
+            font-weight: 500;
+            margin-left: px2rem(30);
+            padding: 8px px2rem(5);
+            cursor: pointer;
+            a {
+                color: rgba(0, 0, 0, 0.8);
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+
+            .btn {
+                color: $white;
+                font-size: inherit;
+                text-transform: capitalize;
+            }
+
+            &.active {
+                a {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    &__mobilenav {
+        margin-left: 0;
+        position: relative;
+
+        i {
+            cursor: pointer;
+            font-size: px2rem(24);
+            padding: px2rem(8) px2rem(12);
+        }
+
+        @include media-breakpoint-up(xl) {
+            display: none;
+        }
+
+        .sidebar {
+            background: $brand-primary;
+            color: $white;
+            height: calc(100vh - 70px);
+            position: fixed;
+            left: 100%;
+            top: px2rem(70);
+            width: 100vw;
+            transition: 0.5s ease-in-out;
+            z-index: 99999;
+            &.is-open {
+                left: 0;
+            }
+
+            &__nav {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding-top: 20px;
+
+                .item {
+                    margin-bottom: px2rem(5);
+                    cursor: pointer;
+
+                    a {
+                        color: $white !important;
+                        font-size: px2rem(18);
+                        display: inline-block;
+                        padding: px2rem(16) px2rem(20);
+                    }
+                }
+            }
+        }
+    }
+}

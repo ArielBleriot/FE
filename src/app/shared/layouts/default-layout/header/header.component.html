@@ -1,0 +1,64 @@
+<header role="banner" id="header" class="header z-index-99">
+    <a href="index.html" class="header__logo">
+      <img src="../../../../../assets/img/brandLogo.png" alt="Company Logo" class="img-fluid w-rem-10" />
+    </a>
+    <div class="header-right justify-content-xl-between justify-content-end w-100">
+      <ul class="header__nav">
+        <li class="item "routerLinkActive="active" routerLink="/">
+          <a > Home </a>
+        </li>
+        
+        <li class="item" routerLinkActive="active" routerLink="/activities">
+            <a> Activities </a>
+          </li>
+          <li class="item" routerLinkActive="active" routerLink="/student-projects">
+            <a> Student Projects </a>
+          </li>
+          <li class="item" routerLinkActive="active" routerLink="/faq">
+            <a> FAQ </a>
+          </li>
+          <li class="item" routerLinkActive="active" routerLink="/profile">
+            <a> Profile </a>
+          </li>
+      </ul>
+     
+      <div class="d-flex align-items-center gap-2">
+        <!-- Profile Image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" 
+             class="rounded-circle img-fluid w-px-36 h-px-36" alt="User Avatar" />
+      
+        <!-- User Full Name -->
+        <div class="fw-medium fs-14">{{fullName}}</div>
+      
+        <!-- Logout Round Button with Power-Off Icon -->
+        <button type="button" class="btn btn-danger rounded-circle w-30 h-30 d-flex justify-content-center align-items-center p-0" (click)="logoutUser()">
+          <i class="fa fa-power-off text-white"></i> <!-- Power-off icon inside a small round button -->
+        </button>
+      </div>
+      <div class="header__mobilenav">
+        <i class="fa-solid fa-bars" (click)="navbarToggler()"></i>
+
+        <div class="sidebar" id="sidebarMenu" [ngClass]="isNavbarOpen ? 'is-open':''">
+          <ul class="sidebar__nav">
+            <li class="item "routerLinkActive="active" routerLink="/">
+              <a > Home </a>
+            </li>
+            
+            <li class="item" routerLinkActive="active" routerLink="/activities">
+                <a> Activities </a>
+              </li>
+              <li class="item" routerLinkActive="active" routerLink="/student-projects">
+                <a> Student Projects </a>
+              </li>
+              <li class="item" routerLinkActive="active" routerLink="/faq">
+                <a> FAQ </a>
+              </li>
+              <li class="item" routerLinkActive="active" routerLink="/profile">
+                <a> Profile </a>
+              </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>

@@ -1,0 +1,100 @@
+.btn {
+    padding-inline: $btn-padding-x;
+    padding-block: $btn-padding-y;
+    font-weight: $btn-font-weight;
+    border-radius: 0.313rem;
+    border-width: 2px;
+
+    @each $color,
+    $value in $theme-colors {
+        &.btn-#{$color} {
+            background-color: $value;
+            border-color: $value;
+            color: white;
+            &:hover {
+                background: $value;
+                color: white;
+                border-color: $value;
+              }
+
+              &:active{
+                background: $value;
+                color: white;
+                border-color: $value;
+              }
+        }
+    }
+    
+    // outline
+    @each $color, $value in $theme-colors {
+        &.btn-outline-#{$color} {
+            border-color: $value;
+            color: $value;
+            background-color: transparent; // Set transparent background
+            &:hover {
+                background: $value;
+                color: white;
+                border-color: $value;
+              }
+        }
+    }
+    
+
+    @each $color,
+    $value in $theme-colors {
+        .btn-#{$color} {
+            @if $color=="light" {
+                @include button-variant($value,
+                    $value,
+                    $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+                    $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+                    $active-background: shade-color($value, $btn-active-bg-shade-amount),
+                    $active-border: shade-color($value, $btn-active-border-shade-amount));
+            }
+
+            @else if $color=="dark" {
+                @include button-variant($value,
+                    $value,
+                    $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+                    $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+                    $active-background: tint-color($value, $btn-active-bg-tint-amount),
+                    $active-border: tint-color($value, $btn-active-border-tint-amount));
+            }
+
+            @else {
+                @include button-variant($value, $value);
+            }
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-text-#{$color} {
+      background-color: transparent;
+      color: $value;
+      border-color: transparent;
+      &:hover {
+        background: rgba($value,0.06);
+        color: $value;
+        border-color: transparent;
+      }
+    }
+  }
+
+.btn-icon-only {
+    width: 2.357rem;
+    height: 2.357rem;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: unset
+  }
+
+.btn-light {
+    @include btn-light();
+  }
+
+  a{
+    color: $brand-primary;
+  }

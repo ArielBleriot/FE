@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 8.466666 8.4666668"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:export-filename="C:\Users\Usman.nasir\Desktop\favs\favicon-192x192.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="13.422441"
+     inkscape:cy="19.251983"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g841"
+     showgrid="false"
+     units="px"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.79375017,-289.2537)">
+    <g
+       id="g841">
+      <g
+         id="g852"
+         transform="matrix(0.91428574,0,0,0.91428574,-0.02935083,25.391559)"
+         inkscape:export-filename="C:\Users\Usman.nasir\Desktop\favs\favicon-32x32.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <g
+           style="opacity:0;fill:#ffffff"
+           id="g830">
+          <rect
+             y="288.65826"
+             x="-0.86202604"
+             height="9.1971874"
+             width="9.1971874"
+             id="rect827"
+             style="opacity:0.5;fill:#ffffff;fill-opacity:0.58823529;stroke:#000000;stroke-width:0.06322896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </g>
+        <g
+           id="g868"
+           transform="matrix(0.52297538,0,0,0.52297538,-6.3743674,131.94749)"
+           style="fill:#3d70b2;fill-opacity:1">
+          <g
+             id="g12"
+             transform="matrix(0.26458333,0,0,0.26458333,2.240076,297.60414)"
+             style="fill:#3d70b2;fill-opacity:1">
+            <path
+               id="path10"
+               d="m 87.44,16.81 v 17.88 c 0,1.57 -1.271,2.84 -2.83,2.84 H 75.3 v -7.99 c 0,-3.19 -2.6,-5.79 -5.79,-5.79 H 63.9 v -6.94 c 0,-1.56 1.27,-2.83 2.83,-2.83 h 17.88 c 1.56,0 2.83,1.27 2.83,2.83 z"
+               inkscape:connector-curvature="0"
+               style="fill:#3d70b2;fill-opacity:1" />
+          </g>
+          <g
+             id="g16"
+             transform="matrix(0.26458333,0,0,0.26458333,2.240076,297.60414)"
+             style="fill:#3d70b2;fill-opacity:1">
+            <path
+               id="path14"
+               d="m 73.3,29.54 v 18.5 h -6.81 c -2.29,0 -4.15,1.87 -4.15,4.16 v 5.08 H 45.56 c -2.1,0 -3.79,-1.69 -3.79,-3.79 V 29.54 c 0,-2.09 1.69,-3.79 3.79,-3.79 h 23.95 c 2.09,0 3.79,1.7 3.79,3.79 z"
+               inkscape:connector-curvature="0"
+               style="fill:#3d70b2;fill-opacity:1" />
+          </g>
+          <g
+             id="g20"
+             transform="matrix(0.26458333,0,0,0.26458333,2.240076,297.60414)"
+             style="fill:#3d70b2;fill-opacity:1">
+            <path
+               id="path18"
+               d="m 82.25,52.2 v 13.61 c 0,1.19 -0.96,2.16 -2.15,2.16 H 66.49 C 65.3,67.97 64.34,67 64.34,65.81 V 52.2 c 0,-1.19 0.96,-2.16 2.15,-2.16 H 80.1 c 1.19,0 2.15,0.97 2.15,2.16 z"
+               inkscape:connector-curvature="0"
+               style="fill:#3d70b2;fill-opacity:1" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

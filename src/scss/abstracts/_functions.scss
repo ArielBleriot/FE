@@ -1,0 +1,4 @@
+@function remove-hash($color) {
+    $color-string: inspect($color); // function to convert the color to a string
+    @return if(str-slice($color-string, 1, 1) == "#", str-slice($color-string, 2), $color-string); //It checks if the first character of the string is '#' using str-slice.
+}

@@ -1,0 +1,36 @@
+.form-control {
+  color: var(--text-color);
+  border-color: var(--gray-400);
+  border-radius: $border-radius-input;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: 0;
+
+    @if $enable-shadows {
+      box-shadow: $input-focus-box-shadow;
+    } @else {
+      // Avoided using mixin so we can pass custom focus shadow properly
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+
+  &:disabled, &.disabled,
+  &[readonly] {
+    opacity: 0.65;
+    // background-color: $input-disabled-bg;
+  }
+
+  &[type="file"] {
+    overflow: hidden; // prevent pseudo element button overlap
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+
+.login-section {
+    
+}
+.bg-mode {
+    background: #fff !important;
+}
+
+@media (min-width: 1200px) {
+    .h3 {
+        font-size: 2.3rem;
+    }
+}
+@media (min-width: 992px) {
+    .vh-xxl-100 {
+        height: 100vh !important;
+    }
+}
+@media (min-width: 576px) {
+    .p-sm-7 {
+        padding: 2.5rem 4rem !important;
+    }
+}

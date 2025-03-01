@@ -1,0 +1,74 @@
+<section class="profile py-5">
+    <div class="container">
+      <div class="profile-cover rounded-4 p-3 p-sm-5 position-relative">
+        <div class="row my-2 my-xl-5 z-1 position-relative">
+          <div class="col-md-8 mx-auto">
+            <h1 class="text-center text-white fs-lg-50 fs-32 fw-bold max-w-70 m-auto mb-xl-0 mb-3">Your Profile</h1>
+          </div>
+        </div>
+  
+        <form class="bg-white shadow rounded-4 position-relative p-4 pe-md-5 pb-5 pb-md-4 mb-4 z-1">
+          <div class="row">
+            <!-- Name input -->
+            <div class="col-lg-6 mb-3">
+              <div class="d-flex align-items-center gap-1">
+                <div class="w-px-50 d-flex justify-content-center">
+                  <i class="fa fa-user color-gray-800 fs-25"></i>
+                </div>
+                <div class="flex-1 position-relative">
+                  <label class="fs-16 color-gray-700">Name</label>
+                  <input type="text" [(ngModel)]="profile.fullName" name="name" class="form-control rounded-3" disabled />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Username input -->
+            <div class="col-lg-6 mb-3">
+              <div class="d-flex align-items-center gap-1">
+                <div class="w-px-50 d-flex justify-content-center">
+                  <i class="fa fa-user-circle color-gray-800 fs-25"></i>
+                </div>
+                <div class="flex-1 position-relative">
+                  <label class="fs-16 color-gray-700">Username</label>
+                  <input type="text" [(ngModel)]="profile.email" name="username" class="form-control rounded-3" disabled />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Personal Interest input -->
+            <div class="col-lg-6 mb-3">
+              <div class="d-flex align-items-center gap-1">
+                <div class="w-px-50 d-flex justify-content-center">
+                  <i class="fa fa-heart color-gray-800 fs-25"></i>
+                </div>
+                <div class="flex-1 position-relative">
+                  <label class="fs-16 color-gray-700">Personal Interests</label>
+                  <input type="text" [(ngModel)]="profile.personalInterests" name="personalInterests" class="form-control rounded-3" disabled />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Field of Study input -->
+            <div class="col-lg-6 mb-3">
+              <div class="d-flex align-items-center gap-1">
+                <div class="w-px-50 d-flex justify-content-center">
+                  <i class="fa fa-graduation-cap color-gray-800 fs-25"></i>
+                </div>
+                <div class="flex-1 position-relative">
+                  <label class="fs-16 color-gray-700">Field of Study</label>
+                  <input type="text" [(ngModel)]="profile.fieldOfStudy" name="fieldOfStudy" class="form-control rounded-3" disabled />
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- <div class="d-flex justify-content-center mt-4">
+            <button type="button" class="btn btn-primary rounded-3 w-50 py-2" disabled>
+              <i class="fa fa-edit me-2"></i>Edit Profile
+            </button>
+          </div> -->
+        </form>
+      </div>
+    </div>
+  </section>
+  

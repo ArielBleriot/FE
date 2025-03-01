@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="d-flex justify-content-between mb-3 align-items-center">
+        <h1 class="fs-24 fw-semibold color-gray-900 mb-0">Projects</h1>
+        <button class="btn btn-primary" (click)="createNewProject()">Create New Project</button>
+    </div>
+    <div *ngFor="let project of projects" class="card shadow-1 border p-px-26 rounded-px-16 mb-3">
+        <div class="d-flex gap-4">
+            <div class="">
+                <img class="h-rem-10 w-rem-14 rounded-px-16 object-fit-cover"
+                    src="https://images.unsplash.com/photo-1736135290115-ec129b0f31fc?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div>
+                <h1 class="fs-20 fw-semibold color-gray-900 mb-2 mt-1">{{project.title}}</h1>
+                <div class="badge text-bg-info text-white mb-2">
+                    {{project.status}}
+                </div>
+                <p class="line-clamp-4 color-gray-700 mb-4">
+                    {{project.description}}
+                </p>
+                <div class="mb-4">
+                    <h1 class="fs-16 fw-semibold color-gray-900 mb-2">Skills</h1>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div *ngFor="let skill of project.skills">
+                            <div class="fs-12 px-px-12 py-px-4 bg-gray-300 rounded-px-4 color-gray-800 d-inline-block">
+                                {{skill}} </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <p class="line-clamp-4 color-gray-700 mb-4">
+                    {{project.fieldOfStudy}}
+                </p>
+                
+            </div>
+        </div>
+        <p-accordion>
+            <p-accordionTab headerStyleClass="bg-gray-100" contentStyleClass="mb-4">
+                <ng-template pTemplate="header">
+                    Discussions
+                </ng-template>
+                <ng-template pTemplate="content">
+                    <div *ngFor="let comment of project.comments">
+                        <!-- Comment Item -->
+                        <div class="mt-4">
+                            <div class="d-flex gap-3 align-items-center">
+                                <!-- Dynamic User Image -->
+                                <!-- <img class="w-px-60 h-px-60 rounded-pill object-fit-cover object-position-top"
+                                    [src]="comment.userImage" alt="User Image"> -->
+        
+                                <div>
+                                    <!-- Dynamic User Name and Date -->
+                                    <span class="color-gray-900 fs-16 fw-medium">{{ comment.studentName }}</span>
+                                    <span class="color-gray-600 fs-14 fw-medium d-block">{{ comment.postingDate | date:'MMM dd, yyyy' }}</span>
+                                </div>
+                            </div>
+        
+                            <!-- Dynamic Comment Description -->
+                            <p class="color-gray-600 fs-16 fw-normal mt-3 mb-2">
+                                {{ comment.description }}
+                            </p>
+                        </div>
+        
+                        <hr class="border-gray-500 my-24">
+                    </div>
+        
+                    <!-- Add Comment Section -->
+                    <h6 class="fs-16 fw-semibold mb-2 mt-5">Add Comment</h6>
+                    <textarea rows="4" class="form-control" name="description" [(ngModel)]="description"></textarea>
+                    <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-primary btn-sm" (click)="addComment(project.id,project.studentId)">Submit</button>
+                    </div>
+                </ng-template>
+            </p-accordionTab>
+        </p-accordion>
+        
+    </div>
+   
+    <p-toast></p-toast>

@@ -1,0 +1,706 @@
+@import "../vendor/bootstrap/variables";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "grid-template-columns": (
+      responsive: true,
+      property: grid-template-columns,
+      class: grid-cols,
+      values: $grid-values
+    ),
+    "cursor": (
+      property: cursor,
+      values: pointer move grab
+    ),
+    "z-index": (
+      property: z-index,
+      values: $z-indexes
+    ),
+    "fs": (
+      property: font-size,
+      class: fs,
+      responsive: true,
+      values: $pixels
+    ),
+    "width-px": (
+      responsive: true,
+      property: width,
+      class: w-px,
+      values: $pixels
+    ),
+    "width-rem": (
+      responsive: true,
+      property: width,
+      class: w-rem,
+      values: $rems
+    ),
+    "width-percentages": (
+      responsive: true,
+      property: width,
+      class: w,
+      values: $percentages
+    ),
+    "max-width": (
+      responsive: true,
+      property: max-width,
+      class: max-w,
+      values: $percentages
+    ),
+    "min-width": (
+      responsive: true,
+      property: min-width,
+      class: min-w,
+      values: $percentages
+    ),
+    "max-width-px": (
+      responsive: true,
+      property: max-width,
+      class: max-w-px,
+      values: $pixels
+    ),
+    "min-width-px": (
+      responsive: true,
+      property: min-width,
+      class: min-w-px,
+      values: $pixels
+    ),
+    "max-width-rem": (
+      responsive: true,
+      property: max-width,
+      class: max-w-rem,
+      values: $rems
+    ),
+    "min-width-rem": (
+      responsive: true,
+      property: min-width,
+      class: min-w-rem,
+      values: $rems
+    ),
+    "height-rem": (
+      responsive: true,
+      property: height,
+      class: h-rem,
+      values: $rems
+    ),
+    "height-px": (
+      responsive: true,
+      property: height,
+      class: h-px,
+      values: $pixels
+    ),
+    "height": (
+      responsive: true,
+      property: height,
+      class: h,
+      values: $percentages
+    ),
+    "max-height-px": (
+      responsive: true,
+      property: max-height,
+      class: max-h-px,
+      values: $pixels
+    ),
+    "max-height": (
+      responsive: true,
+      property: max-height,
+      class: max-h,
+      values: $percentages
+    ),
+    "max-height-rem": (
+      responsive: true,
+      property: max-height,
+      class: max-h-rem,
+      values: $rems
+    ),
+    "min-height-px": (
+      responsive: true,
+      property: min-height,
+      class: min-h-px,
+      values: $pixels
+    ),
+    "min-height": (
+      responsive: true,
+      property: min-height,
+      class: min-h,
+      values: $percentages
+    ),
+    "min-height-rem": (
+      responsive: true,
+      property: min-height,
+      class: min-h-rem,
+      values: $rems
+    ),
+    "viewport-height": (
+      responsive: true,
+      property: height,
+      class: vh-calc,
+      values: $vh-calc
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh-calc,
+      values: $vh-calc
+    ),
+    "max-viewport-height": (
+      property: max-height,
+      class: max-vh-calc,
+      values: $vh-calc
+    ),
+    "flex": (
+      responsive: true,
+      property: flex,
+      values: (
+        auto: 1 1 auto,
+        0: 0 0 auto,
+        1: 1,
+        2: 2,
+        3: 3
+      )
+    ),
+    "gap-px": (
+      responsive: true,
+      property: gap,
+      class: gap-px,
+      values: $pixels
+    ),
+    "row-gap": (
+      responsive: true,
+      property: row-gap,
+      class: row-gap-px,
+      values: $pixels
+    ),
+    "column-gap": (
+      responsive: true,
+      property: column-gap,
+      class: column-gap-px,
+      values: $pixels
+    ),
+    "margin-px": (
+      responsive: true,
+      property: margin,
+      class: m-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-x-px": (
+      responsive: true,
+      property: margin-inline-end margin-inline-start,
+      class: mx-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-y-px": (
+      responsive: true,
+      property: margin-block-start margin-block-end,
+      class: my-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-top-px": (
+      responsive: true,
+      property: margin-block-start,
+      class: mt-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-end-px": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-bottom-px": (
+      responsive: true,
+      property: margin-block-end,
+      class: mb-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-start-px": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms-px,
+      values:
+        map-merge(
+          $pixels,
+          (
+            auto: auto
+          )
+        )
+    ),
+    // Negative margin utilities
+    "negative-margin-px":
+      (
+        responsive: true,
+        property: margin,
+        class: m-px,
+        values: $negative-pixels
+      ),
+    "negative-margin-x-px": (
+      responsive: true,
+      property: margin-inline-end margin-inline-start,
+      class: mx-px,
+      values: $negative-pixels
+    ),
+    "negative-margin-y-px": (
+      responsive: true,
+      property: margin-block-end margin-block-start,
+      class: my-px,
+      values: $negative-pixels
+    ),
+    "negative-margin-top-px": (
+      responsive: true,
+      property: margin-block-start,
+      class: mt-px,
+      values: $negative-pixels
+    ),
+    "negative-margin-end-px": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me-px,
+      values: $negative-pixels
+    ),
+    "negative-margin-bottom-px": (
+      responsive: true,
+      property: margin-block-end,
+      class: mb-px,
+      values: $negative-pixels
+    ),
+    "negative-margin-start-px": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms-px,
+      values: $negative-pixels
+    ),
+
+    "margin-rem": (
+      responsive: true,
+      property: margin,
+      class: m-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-x-rem": (
+      responsive: true,
+      property: margin-inline-end margin-inline-start,
+      class: mx-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-y-rem": (
+      responsive: true,
+      property: margin-block-start margin-block-end,
+      class: mx-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-top-rem": (
+      responsive: true,
+      property: margin-block-start,
+      class: mt-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-end-rem": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-bottom-rem": (
+      responsive: true,
+      property: margin-block-end,
+      class: mb-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    "margin-start-rem": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms-rem,
+      values:
+        map-merge(
+          $rems,
+          (
+            auto: auto
+          )
+        )
+    ),
+    // Negative margin utilities
+    "negative-margin-rem":
+      (
+        responsive: true,
+        property: margin,
+        class: m-rem,
+        values: $negative-rems
+      ),
+    "negative-margin-x-rem": (
+      responsive: true,
+      property: margin-inline-end margin-inline-start,
+      class: mx-rem,
+      values: $negative-rems
+    ),
+    "negative-margin-y-rem": (
+      responsive: true,
+      property: margin-block-end margin-block-start,
+      class: my-rem,
+      values: $negative-rems
+    ),
+    "negative-margin-top-rem": (
+      responsive: true,
+      property: margin-block-start,
+      class: mt-rem,
+      values: $negative-rems
+    ),
+    "negative-margin-end-rem": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me-rem,
+      values: $negative-rems
+    ),
+    "negative-margin-bottom-rem": (
+      responsive: true,
+      property: margin-block-end,
+      class: mb-rem,
+      values: $negative-rems
+    ),
+    "negative-margin-start-rem": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms-rem,
+      values: $negative-rems
+    ),
+    // Padding utilities
+    "padding-px":
+      (
+        responsive: true,
+        property: padding,
+        class: p-px,
+        values: $pixels
+      ),
+    "padding-x-px": (
+      responsive: true,
+      property: padding-inline-start padding-inline-end,
+      class: px-px,
+      values: $pixels
+    ),
+    "padding-y-px": (
+      responsive: true,
+      property: padding-block-start padding-block-end,
+      class: py-px,
+      values: $pixels
+    ),
+    "padding-top-px": (
+      responsive: true,
+      property: padding-block-start,
+      class: pt-px,
+      values: $pixels
+    ),
+    "padding-end-px": (
+      responsive: true,
+      property: padding-inline-end,
+      class: pe-px,
+      values: $pixels
+    ),
+    "padding-bottom-px": (
+      responsive: true,
+      property: padding-block-end,
+      class: pb-px,
+      values: $pixels
+    ),
+    "padding-start-px": (
+      responsive: true,
+      property: padding-inline-start,
+      class: ps-px,
+      values: $pixels
+    ),
+    // Padding utilities
+    "padding-rem":
+      (
+        responsive: true,
+        property: padding,
+        class: p-rem,
+        values: $rems
+      ),
+    "padding-x-rem": (
+      responsive: true,
+      property: padding-inline-start padding-inline-end,
+      class: px-rem,
+      values: $rems
+    ),
+    "padding-y-rem": (
+      responsive: true,
+      property: padding-block-start padding-block-end,
+      class: py-rem,
+      values: $rems
+    ),
+    "padding-top-rem": (
+      responsive: true,
+      property: padding-block-start,
+      class: pt-rem,
+      values: $rems
+    ),
+    "padding-end-rem": (
+      responsive: true,
+      property: padding-inline-end,
+      class: pe-rem,
+      values: $rems
+    ),
+    "padding-bottom-rem": (
+      responsive: true,
+      property: padding-block-end,
+      class: pb-rem,
+      values: $rems
+    ),
+    "padding-start-rem": (
+      responsive: true,
+      property: padding-inline-start,
+      class: ps-rem,
+      values: $rems
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: start,
+        end: end,
+        center: center
+      )
+    ),
+    "text-transform": (
+      property: text-transform,
+      class: text,
+      values: lowercase uppercase capitalize
+    ),
+    "white-space": (
+      responsive: true,
+      property: white-space,
+      class: text,
+      values: (
+        wrap: normal,
+        nowrap: nowrap
+      )
+    ),
+    "word-wrap": (
+      property: word-wrap word-break,
+      class: text,
+      values: (
+        break: break-word
+      ),
+      rtl: false
+    ),
+    "rounded-px": (
+      responsive: true,
+      property: border-radius,
+      class: rounded-px,
+      values: $pixels
+    ),
+    "border-top": (
+      responsive: true,
+      property: border-block-start,
+      class: border-top,
+      values: $border-widths-custom
+    ),
+    "border-end": (
+      responsive: true,
+      property: border-inline-end,
+      class: border-end,
+      values: $border-widths-custom
+    ),
+    "border-bottom": (
+      responsive: true,
+      property: border-block-end,
+      class: border-bottom,
+      values: $border-widths-custom
+    ),
+    "border-start": (
+      responsive: true,
+      property: border-inline-start,
+      class: border-start,
+      values: $border-widths-custom
+    ),
+    "border-style": (
+      property: border-style,
+      class: border-style,
+      values: dotted dashed
+    ),
+    "border-top-right-radius": (
+      responsive: true,
+      property: border-top-right-radius,
+      values:$border-radiuses
+    ),
+    "border-top-left-radius": (
+      responsive: true,
+      property: border-top-left-radius,
+      values:$border-radiuses
+    ),
+    "border-bottom-left-radius": (
+      responsive: true,
+      property: border-bottom-left-radius,
+      values:$border-radiuses
+    ),
+    "border-bottom-right-radius": (
+      responsive: true,
+      property: border-bottom-right-radius,
+      values:$border-radiuses
+    ),
+    "top-px": (
+      responsive: true,
+      property: inset-block-start,
+      class: top-px,
+      values: $pixels
+    ),
+    "bottom-px": (
+      responsive: true,
+      property: inset-block-end,
+      class: bottom-px,
+      values: $pixels
+    ),
+    "start-px": (
+      responsive: true,
+      property: inset-inline-start,
+      class: start-px,
+      values: $pixels
+    ),
+    "end-px": (
+      responsive: true,
+      property: inset-inline-end,
+      class: end-px,
+      values: $pixels
+    ),
+    "negative-top-px": (
+      responsive: true,
+      property: inset-block-start,
+      class: top-px,
+      values: $negative-pixels
+    ),
+    "negative-bottom-px": (
+      responsive: true,
+      property: inset-block-start,
+      class: bottom-px,
+      values: $negative-pixels
+    ),
+    "negative-start-px": (
+      responsive: true,
+      property: inset-inline-start,
+      class: start-px,
+      values: $negative-pixels
+    ),
+    "negative-end-px": (
+      responsive: true,
+      property: inset-inline-end,
+      class: end-px,
+      values: $negative-pixels
+    ),
+    "top": (
+      responsive: true,
+      property: inset-block-start,
+      class: top,
+      values: $percentages
+    ),
+    "bottom": (
+      responsive: true,
+      property: inset-block-end,
+      class: bottom,
+      values: $percentages
+    ),
+    "start": (
+      responsive: true,
+      property: inset-inline-start,
+      class: start,
+      values: $percentages
+    ),
+    "end": (
+      responsive: true,
+      property: inset-inline-end,
+      class: end,
+      values: $percentages
+    ),
+
+    "opacity": (
+      responsive: true,
+      property: opacity,
+      class: opacity,
+      values: $opacities
+    ),
+    "object-position": (
+      responsive: true,
+      property: object-position,
+      values: (
+        top: top,
+        center: center,
+        bottom: bottom
+      )
+    )
+  )
+);
+
+@import "../vendor/bootstrap/utilities/api";
+@import "./utilities/hover-states.scss";
+@import "./utilities/transitions.scss";
+@import "./utilities/background-imgs.scss";
+@import "./utilities/grids";
