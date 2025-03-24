@@ -5,6 +5,7 @@ export interface ProjectDto {
     status: string;
     description: string;
     skills: string[];
+    interests:string[];
     fieldOfStudy: string;
     imageUrl: string;
     comments:any[];

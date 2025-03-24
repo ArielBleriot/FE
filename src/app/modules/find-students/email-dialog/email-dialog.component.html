@@ -1,0 +1,70 @@
+<p-dialog 
+    [(visible)]="visible" 
+    [modal]="true" 
+    [style]="{width: '500px'}" 
+    header="Send Message" 
+    [draggable]="false" 
+    [resizable]="false"
+    styleClass="p-dialog-custom"
+    (onHide)="hideDialog()">
+    
+    <div class="p-fluid px-2">
+        <!-- <div class="field mb-4">
+            <label for="to" class="block mb-2">To</label>
+            <input 
+                id="to" 
+                type="text" 
+                pInputText 
+                [(ngModel)]="emailData.to" 
+                [disabled]="true"
+                class="p-inputtext-sm">
+        </div> -->
+
+        <div class="field mb-4">
+            <label for="subject" class="block mb-2 fw-medium">Subject</label>
+            <input 
+                id="subject" 
+                type="text" 
+                pInputText 
+                [(ngModel)]="emailData.subject" 
+                placeholder="Enter subject"
+                [disabled]="isSending"
+                class="p-inputtext-lg w-100">
+        </div>
+
+        <div class="field mb-4">
+            <label for="message" class="block mb-2 fw-medium">Message</label>
+            <textarea 
+                id="message" 
+                rows="6" 
+                pInputTextarea 
+                [(ngModel)]="emailData.body" 
+                placeholder="Write your message here..."
+                [disabled]="isSending"
+                class="w-100"></textarea>
+        </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <div class="flex justify-content-end gap-2 px-2">
+            <button 
+                pButton 
+                label="Cancel" 
+                icon="pi pi-times" 
+                class="p-button-text" 
+                [disabled]="isSending"
+                (click)="hideDialog()">
+            </button>
+            <button 
+                pButton 
+                [label]="isSending ? 'Sending...' : 'Send'"
+                [icon]="isSending ? 'pi pi-spin pi-spinner' : 'pi pi-send'"
+                class="p-button-primary" 
+                [disabled]="isSending"
+                (click)="sendEmail()">
+            </button>
+        </div>
+    </ng-template>
+</p-dialog>
+
+<p-toast></p-toast>

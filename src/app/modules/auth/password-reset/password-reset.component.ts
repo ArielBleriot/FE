@@ -28,7 +28,10 @@ export class PasswordResetComponent implements OnInit {
   ngOnInit(): void {
     // Get the token from the URL
     this.resetToken = this.route.snapshot.queryParamMap.get('token') || '';
-
+    // this.route.paramMap.subscribe(params => {
+    //   const resetToken = params.get('token');  // Now 'get' method works correctly
+    //   console.log(resetToken);
+    // });
     // Initialize form
     this.resetPasswordForm = this.fb.group(
       {

@@ -3,10 +3,10 @@
         <h1 class="fs-24 fw-semibold color-gray-900 mb-0">Projects</h1>
         <button class="btn btn-primary" (click)="createNewProject()">Create New Project</button>
     </div>
-    <div *ngFor="let project of projects" class="card shadow-1 border p-px-26 rounded-px-16 mb-3">
-        <div class="d-flex gap-4">
+    <div *ngFor="let project of projects" class="card shadow-1 border p-px-sm-26 p-3 rounded-px-16 mb-3">
+        <div class="d-flex gap-4 flex-lg-row flex-column">
             <div class="">
-                <img class="h-rem-10 w-rem-14 rounded-px-16 object-fit-cover"
+                <img class="h-rem-10 w-rem-sm-14 w-100 rounded-px-16 object-fit-cover"
                     src="https://images.unsplash.com/photo-1736135290115-ec129b0f31fc?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
             <div>
@@ -29,9 +29,17 @@
                     </div>
                 </div>
 
-                <p class="line-clamp-4 color-gray-700 mb-4">
-                    {{project.fieldOfStudy}}
-                </p>
+                <div class="mb-4">
+                    <h1 class="fs-16 fw-semibold color-gray-900 mb-2">Interests</h1>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div *ngFor="let interest of project.interests">
+                            <div class="fs-12 px-px-12 py-px-4 bg-gray-300 rounded-px-4 color-gray-800 d-inline-block">
+                                {{interest}} </div>
+
+                        </div>
+
+                    </div>
+                </div>
                 
             </div>
         </div>

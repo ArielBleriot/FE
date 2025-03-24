@@ -6,6 +6,9 @@ import {
 } from "./chunk-QUEZXWXC.js";
 import "./chunk-ZBE6FMK4.js";
 import {
+  DomHandler
+} from "./chunk-JZQAVOZS.js";
+import {
   animate,
   state,
   style,
@@ -13,8 +16,11 @@ import {
   trigger
 } from "./chunk-5DWVAZNK.js";
 import {
-  DomHandler
-} from "./chunk-JZQAVOZS.js";
+  Header,
+  PrimeTemplate,
+  SharedModule,
+  UniqueComponentId
+} from "./chunk-GGZUDD5S.js";
 import {
   CommonModule,
   NgClass,
@@ -22,12 +28,6 @@ import {
   NgStyle,
   NgTemplateOutlet
 } from "./chunk-462MHC2M.js";
-import {
-  Header,
-  PrimeTemplate,
-  SharedModule,
-  UniqueComponentId
-} from "./chunk-GGZUDD5S.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,

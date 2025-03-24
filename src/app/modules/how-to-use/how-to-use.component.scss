@@ -1,0 +1,33 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ol {
+    padding-left: 1.5rem;
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.grid {
+    .col-12 {
+        padding: 1rem;
+    }
+}

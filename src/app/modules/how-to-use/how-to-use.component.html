@@ -1,0 +1,51 @@
+<div class="container">
+    <h1 class="text-center mb-4">How to Use BridgeRTU</h1>
+    
+    <p-card styleClass="mb-4">
+        <p class="lead text-center">
+            Welcome to BridgeRTU - your platform for connecting with fellow students, sharing projects,
+            and discovering exciting activities!
+        </p>
+    </p-card>
+
+    <p-accordion [multiple]="true" styleClass="mb-4">
+        <p-accordionTab *ngFor="let section of sections" [header]="section.title">
+            <p>{{section.content}}</p>
+            <div class="mt-3">
+                <p-button [routerLink]="section.route" label="Go to {{section.title}}" styleClass="p-button-outlined"></p-button>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+
+    <p-card styleClass="mb-4">
+        <h3>Getting Started</h3>
+        <ol>
+            <li>Complete your profile with your interests and field of study</li>
+            <li>Browse through activities and projects that match your interests</li>
+            <li>Connect with other students working on similar projects</li>
+            <li>Share your own projects to find collaborators</li>
+        </ol>
+    </p-card>
+
+    <p-card>
+        <h3>Key Features</h3>
+        <div class="grid">
+            <div class="col-12 md:col-6 lg:col-3 mb-3">
+                <h4>Project Sharing</h4>
+                <p>Post and manage your academic projects to showcase your work and find collaborators.</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3 mb-3">
+                <h4>Activity Discovery</h4>
+                <p>Find and register for activities that align with your interests and field of study.</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3 mb-3">
+                <h4>Student Connect</h4>
+                <p>Search for and connect with students who share your academic interests.</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3 mb-3">
+                <h4>Smart Recommendations</h4>
+                <p>Get personalized suggestions for activities and projects based on your profile.</p>
+            </div>
+        </div>
+    </p-card>
+</div>

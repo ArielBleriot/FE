@@ -85,7 +85,7 @@
             <div class="col-md-4">
               <div class="position-relative">
                 <img [src]="activity.imageUrl" class="card-img rounded-3 h-px-240 object-fit-cover" alt="Card image">
-                <div class="position-absolute top-0 start-0 z-index-1 m-2">
+                <div class="position-absolute top-0 start-0 z-1 m-2">
                   <div class="badge" [ngClass]="{'text-bg-danger': activity.status === 'Sold Out', 'text-bg-info': activity.status === 'Available'}">
                     {{ activity.status }}
                   </div>

@@ -132,4 +132,22 @@ export class ApiService {
   registerForActivity(request:any): Observable<any> {
     return this.http.post<any>(this.apiUrl+'student/ActivityRegistration', request);
   }
+
+  getFilteredStudents(filters: any): Observable<any> {
+    const authToken = localStorage.getItem('AuthToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`,
+      'Content-Type': 'application/json'
+    });
+    return this.http.post<any>(this.apiUrl + 'Student/search', filters, { headers: headers });
+  }
+
+  sendEmail(emailData: any): Observable<any> {
+    const authToken = localStorage.getItem('AuthToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`,
+      'Content-Type': 'application/json'
+    });
+    return this.http.post<any>(this.apiUrl + 'Email/send', emailData, { headers: headers });
+  }
 }
