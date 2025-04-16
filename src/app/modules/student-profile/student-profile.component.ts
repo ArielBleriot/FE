@@ -42,6 +42,7 @@ export class StudentProfileComponent {
   }
 
   updateProfile(): void {
+    this.profile.personalInterests=this.profile.personalInterests.split(",");
     this.apiService.updateProfile(this.profile).subscribe({
       next: (response) => {
         this.messageService.add({
