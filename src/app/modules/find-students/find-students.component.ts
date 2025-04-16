@@ -306,11 +306,11 @@ export class FindStudentsComponent implements OnInit {
     this.apiService.getFilteredStudents(filters).subscribe({
       next: (response) => {
         this.students = response;
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Success',
-          detail: 'Student list has been updated based on your filters'
-        });
+        // this.messageService.add({
+        //   severity: 'success',
+        //   summary: 'Success',
+        //   detail: 'Student list has been updated based on your filters'
+        // });
       },
       error: (error) => {
         console.error('Filter error:', error);

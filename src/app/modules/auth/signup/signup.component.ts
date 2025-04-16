@@ -135,6 +135,8 @@ export class SignupComponent implements OnInit {
     private router: Router) {}
 
   ngOnInit(): void {
+    this.fieldsOfStudy.sort((a, b) => a.name.localeCompare(b.name));
+    this.personalInterests.sort((a, b) => a.name.localeCompare(b.name));
     this.signupForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       universityName: ['', Validators.required],

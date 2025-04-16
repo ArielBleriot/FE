@@ -5,23 +5,23 @@
                 <div
                     class="col-lg-6 align-items-center justify-content-center order-2 order-lg-1 d-lg-flex d-none border-end-lg-1 border-gray-300">
                     <div class="p-3 p-lg-5">
-                        <img src="../../../../assets/img/brandLogo.jpg" alt="" class="img-fluid w-px-400">
+                        <img src="../../../../assets/img/brandLogo.jpg" alt="" class="img-fluid w-px-300">
                     </div>
                 </div>
 
                 <div class="col-lg-6 order-1">
                     <div class="p-4 p-sm-7 vh-xxl-100 overflow-auto">
                         <div class="max-w-px-500 mx-auto">
-                            <a href="index.html">
+                            <!-- <a href="index.html">
                                 <img class="h-px-50 mb-4" src="../../../../assets/img/brandLogo.jpg" alt="logo">
-                            </a>
+                            </a> -->
                             <h1 class="mb-2 h3 fw-bold color-gray-900">Welcome back</h1>
                             <p class="mb-0 color-gray-600">New here?<a routerLink="/accounts/signup"> Create an
                                     account</a></p>
 
                                     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-4 text-start">
                                         <div class="mb-3">
-                                          <label for="email" class="form-label color-gray-600">Enter email id</label>
+                                          <label for="email" class="form-label color-gray-600">Enter email</label>
                                           <input
                                             id="email"
                                             formControlName="email"
@@ -59,7 +59,7 @@
                                               formControlName="rememberMe"
                                             />
                                             <label class="form-check-label color-gray-600 pt-1" for="rememberCheck">
-                                              Remember me?
+                                              Remember me
                                             </label>
                                           </div>
                                         </div>

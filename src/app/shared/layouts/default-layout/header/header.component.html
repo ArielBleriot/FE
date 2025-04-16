@@ -24,15 +24,19 @@
           <li class="item" routerLinkActive="active" routerLink="/how-to-use">
             <a> How to Use </a>
           </li>
-          <li class="item" routerLinkActive="active" routerLink="/profile">
+          <!-- <li class="item" routerLinkActive="active" routerLink="/profile">
             <a> Profile </a>
-          </li>
+          </li> -->
       </ul>
      
       <div class="d-flex align-items-center gap-2">
         <!-- Profile Image -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" 
-             class="rounded-circle img-fluid w-px-36 h-px-36" alt="User Avatar" />
+        <a [routerLink]="['/profile']">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+               class="rounded-circle img-fluid w-px-36 h-px-36"
+               alt="User Avatar" />
+        </a>
+        
       
         <!-- User Full Name -->
         <div class="fw-medium fs-14 max-w-px-98 max-w-px-sm-none">{{fullName}}</div>
@@ -67,9 +71,9 @@
               <li class="item" routerLinkActive="active" routerLink="/how-to-use" (click)="isNavbarOpen = false">
                 <a> How to Use </a>
               </li>
-              <li class="item" routerLinkActive="active" routerLink="/profile" (click)="isNavbarOpen = false">
+              <!-- <li class="item" routerLinkActive="active" routerLink="/profile" (click)="isNavbarOpen = false">
                 <a> Profile </a>
-              </li>
+              </li> -->
 
           </ul>
         </div>

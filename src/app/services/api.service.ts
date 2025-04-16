@@ -112,16 +112,21 @@ export class ApiService {
    
   }
   getProfile(): Observable<any> {
-    const authToken = localStorage.getItem('AuthToken'); // Replace with actual storage method
-
- 
-    // Set up the headers with the Authorization token
+    const authToken = localStorage.getItem('AuthToken');
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${authToken}`,  // Format the token with "Bearer "
-      'Content-Type': 'application/json'   // Adjust content type if you're sending form data
+      'Authorization': `Bearer ${authToken}`,
+      'Content-Type': 'application/json'
     });
+    return this.http.get<any>(`${this.apiUrl}student/profile`, { headers });
+  }
 
-    return this.http.get<ProjectDto[]>(this.apiUrl+'Student/Profile', { headers: headers });
+  updateProfile(profile: any): Observable<any> {
+    const authToken = localStorage.getItem('AuthToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`,
+      'Content-Type': 'application/json'
+    });
+    return this.http.put<any>(`${this.apiUrl}student/profile`, profile, { headers });
   }
   forgotPassword(email:string): Observable<any> {
     return this.http.post<any>(this.apiUrl+'student/forgot-password', { email });

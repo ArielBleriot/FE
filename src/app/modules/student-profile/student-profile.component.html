@@ -7,7 +7,7 @@
           </div>
         </div>
   
-        <form class="bg-white shadow rounded-4 position-relative p-4 pe-md-5 pb-5 pb-md-4 mb-4 z-1">
+        <form class="bg-white shadow rounded-4 position-relative p-4 pe-md-5 pb-5 pb-md-4 mb-4 z-1" (ngSubmit)="updateProfile()">
           <div class="row">
             <!-- Name input -->
             <div class="col-lg-6 mb-3">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex-1 position-relative">
                   <label class="fs-16 color-gray-700">Name</label>
-                  <input type="text" [(ngModel)]="profile.fullName" name="name" class="form-control rounded-3" disabled />
+                  <input type="text" [(ngModel)]="profile.fullName" name="name" class="form-control rounded-3" [disabled]="!isEditing" />
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="flex-1 position-relative">
                   <label class="fs-16 color-gray-700">Personal Interests</label>
-                  <input type="text" [(ngModel)]="profile.personalInterests" name="personalInterests" class="form-control rounded-3" disabled />
+                  <input type="text" [(ngModel)]="profile.personalInterests" name="personalInterests" class="form-control rounded-3" [disabled]="!isEditing" />
                 </div>
               </div>
             </div>
@@ -56,19 +56,20 @@
                 </div>
                 <div class="flex-1 position-relative">
                   <label class="fs-16 color-gray-700">Field of Study</label>
-                  <input type="text" [(ngModel)]="profile.fieldOfStudy" name="fieldOfStudy" class="form-control rounded-3" disabled />
+                  <input type="text" [(ngModel)]="profile.fieldOfStudy" name="fieldOfStudy" class="form-control rounded-3" [disabled]="!isEditing" />
                 </div>
               </div>
             </div>
           </div>
   
-          <!-- <div class="d-flex justify-content-center mt-4">
-            <button type="button" class="btn btn-primary rounded-3 w-50 py-2" disabled>
-              <i class="fa fa-edit me-2"></i>Edit Profile
-            </button>
-          </div> -->
+          <div class="col-12 text-center mt-4">
+            <button *ngIf="!isEditing" type="button" class="btn btn-primary px-4" (click)="toggleEdit()">Edit Profile</button>
+            <ng-container *ngIf="isEditing">
+              <button type="submit" class="btn btn-success px-4 me-2">Save Changes</button>
+              <button type="button" class="btn btn-secondary px-4" (click)="cancelEdit()">Cancel</button>
+            </ng-container>
+          </div>
         </form>
       </div>
     </div>
   </section>
-  
