@@ -13,10 +13,7 @@ import {
   OverlayModule,
   Scroller,
   ScrollerModule
-} from "./chunk-H5ZRBDH4.js";
-import {
-  CheckIcon
-} from "./chunk-FAAWU5ZK.js";
+} from "./chunk-DT4F7VP3.js";
 import {
   TimesIcon
 } from "./chunk-NKQFT46N.js";
@@ -26,9 +23,15 @@ import {
   RippleModule
 } from "./chunk-AZRRNNUA.js";
 import {
+  CheckIcon
+} from "./chunk-FAAWU5ZK.js";
+import {
   AutoFocus,
   AutoFocusModule
 } from "./chunk-A5RCR4PH.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-ZWPVEPY3.js";
 import {
   ChevronDownIcon
 } from "./chunk-QUEZXWXC.js";
@@ -38,7 +41,6 @@ import {
 import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
-import "./chunk-5DWVAZNK.js";
 import {
   FilterService,
   Footer,
@@ -51,9 +53,7 @@ import {
   TranslationKeys,
   UniqueComponentId
 } from "./chunk-GGZUDD5S.js";
-import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-ZWPVEPY3.js";
+import "./chunk-5DWVAZNK.js";
 import {
   CommonModule,
   NgClass,

@@ -9,18 +9,18 @@ import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
 import {
+  Header,
+  PrimeTemplate,
+  SharedModule,
+  UniqueComponentId
+} from "./chunk-GGZUDD5S.js";
+import {
   animate,
   state,
   style,
   transition,
   trigger
 } from "./chunk-5DWVAZNK.js";
-import {
-  Header,
-  PrimeTemplate,
-  SharedModule,
-  UniqueComponentId
-} from "./chunk-GGZUDD5S.js";
 import {
   CommonModule,
   NgClass,
