@@ -3,7 +3,7 @@ import {
   FocusTrapModule,
   WindowMaximizeIcon,
   WindowMinimizeIcon
-} from "./chunk-EFJQQDHZ.js";
+} from "./chunk-G2Y5T2F7.js";
 import {
   TimesIcon
 } from "./chunk-NKQFT46N.js";
@@ -11,13 +11,6 @@ import "./chunk-ZBE6FMK4.js";
 import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
-import {
-  PrimeNGConfig,
-  SharedModule,
-  TranslationKeys,
-  UniqueComponentId,
-  zindexutils
-} from "./chunk-GGZUDD5S.js";
 import {
   animate,
   animation,
@@ -35,6 +28,13 @@ import {
   NgStyle,
   isPlatformBrowser
 } from "./chunk-462MHC2M.js";
+import {
+  PrimeNGConfig,
+  SharedModule,
+  TranslationKeys,
+  UniqueComponentId,
+  zindexutils
+} from "./chunk-GGZUDD5S.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,

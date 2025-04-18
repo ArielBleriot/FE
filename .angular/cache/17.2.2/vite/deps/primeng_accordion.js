@@ -9,12 +9,6 @@ import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
 import {
-  Header,
-  PrimeTemplate,
-  SharedModule,
-  UniqueComponentId
-} from "./chunk-GGZUDD5S.js";
-import {
   animate,
   state,
   style,
@@ -28,6 +22,12 @@ import {
   NgStyle,
   NgTemplateOutlet
 } from "./chunk-462MHC2M.js";
+import {
+  Header,
+  PrimeTemplate,
+  SharedModule,
+  UniqueComponentId
+} from "./chunk-GGZUDD5S.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,

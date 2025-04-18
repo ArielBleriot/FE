@@ -5,13 +5,13 @@ import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
 import {
-  UniqueComponentId
-} from "./chunk-GGZUDD5S.js";
-import {
   CommonModule,
   DOCUMENT,
   isPlatformBrowser
 } from "./chunk-462MHC2M.js";
+import {
+  UniqueComponentId
+} from "./chunk-GGZUDD5S.js";
 import {
   Component,
   Directive,
@@ -316,4 +316,4 @@ export {
   WindowMaximizeIcon,
   WindowMinimizeIcon
 };
-//# sourceMappingURL=chunk-EFJQQDHZ.js.map
+//# sourceMappingURL=chunk-G2Y5T2F7.js.map

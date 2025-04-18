@@ -9,14 +9,6 @@ import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
 import {
-  ObjectUtils,
-  OverlayService,
-  PrimeNGConfig,
-  PrimeTemplate,
-  SharedModule,
-  zindexutils
-} from "./chunk-GGZUDD5S.js";
-import {
   animate,
   animation,
   style,
@@ -34,6 +26,14 @@ import {
   NgTemplateOutlet,
   isPlatformBrowser
 } from "./chunk-462MHC2M.js";
+import {
+  ObjectUtils,
+  OverlayService,
+  PrimeNGConfig,
+  PrimeTemplate,
+  SharedModule,
+  zindexutils
+} from "./chunk-GGZUDD5S.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -2477,4 +2477,4 @@ export {
   Scroller,
   ScrollerModule
 };
-//# sourceMappingURL=chunk-DT4F7VP3.js.map
+//# sourceMappingURL=chunk-DTTKPUPO.js.map

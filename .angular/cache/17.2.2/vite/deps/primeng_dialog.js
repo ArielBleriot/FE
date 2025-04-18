@@ -3,34 +3,24 @@ import {
   FocusTrapModule,
   WindowMaximizeIcon,
   WindowMinimizeIcon
-} from "./chunk-EFJQQDHZ.js";
+} from "./chunk-G2Y5T2F7.js";
 import {
   TimesIcon
 } from "./chunk-NKQFT46N.js";
 import {
   ButtonDirective,
   ButtonModule
-} from "./chunk-XEIDPQJF.js";
+} from "./chunk-EPNW2P3L.js";
 import "./chunk-7MCMFOFB.js";
 import {
   Ripple,
   RippleModule
-} from "./chunk-AZRRNNUA.js";
+} from "./chunk-GGSAMCQ7.js";
 import "./chunk-A5RCR4PH.js";
 import "./chunk-ZBE6FMK4.js";
 import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
-import {
-  Footer,
-  Header,
-  PrimeNGConfig,
-  PrimeTemplate,
-  SharedModule,
-  TranslationKeys,
-  UniqueComponentId,
-  zindexutils
-} from "./chunk-GGZUDD5S.js";
 import {
   animate,
   animation,
@@ -48,6 +38,16 @@ import {
   NgTemplateOutlet,
   isPlatformBrowser
 } from "./chunk-462MHC2M.js";
+import {
+  Footer,
+  Header,
+  PrimeNGConfig,
+  PrimeTemplate,
+  SharedModule,
+  TranslationKeys,
+  UniqueComponentId,
+  zindexutils
+} from "./chunk-GGZUDD5S.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
